@@ -15,140 +15,318 @@ import phone from './image-removebg-preview2.png'
 import phoneTwo from './image-removebg-preview (1).png'
 import { FaPlus } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
-// import { VscPlay } from "react-icons/vsc";
 const Home = () => {
   const { lang } = useLang(); 
   const t = {
-        placeholder: {en: "Your name", ar: "ما اسمك"},
-        title: { en: "Is your business ready for ZATCA compliance?", ar: "هل عملك جاهز للامتثال لمتطلبات هيئة الزكاة والضريبة والجمارك (ZATCA)؟" },
-        subtitle: {
-        en: "Zatca deadlines coming up? Choose kpi.com to seamlessly get your accounts aligned.",
-        ar: "هل تقترب مواعيد ZATCA النهائية؟ اختر kpi.com لتنظيم حساباتك بسلاسة."
-        },
-        tryBtn: { en: "Try Integration", ar: "جرّب التكامل الآن" },
-        formTitle: { en: "Connect with Us Now", ar: "تواصل معنا الآن" },
-        demoBtn: { en: "Get started", ar: "ابدأ الآن" },
-        agree: { en: "I agree to the processing of", ar: "أوافق على معالجة" },
-        personal: { en: "privacy", ar: "خصوصية" },
-        commonProblems: {
-        en: "How kpi.com helps you get integrated?",
-        ar: "كيف تساعدك kpi.com على التكامل؟"},
-        // commonSubtitle: {
-        // en: "How kpi.com helps you get integrated",
-        // ar: "ما الذي يعيق نمو عملك بكفاءة؟"
-        // },
-        bestChoice: {
-        en: "Kpi.com — Your Trusted ZATCA Integration Partner",
-        ar: "Kpi.com — شريكك الموثوق لتكامل ZATCA"
-        },
-        guestInfo: {
-        en: "All Invoice Data in One Secure Dashboard Track every essential detail of your e-invoices, all in one place:",
-        ar: "كل بيانات الفواتير في لوحة تحكم واحدة وآمنة تابع جميع تفاصيل فواتيرك الإلكترونية في مكان واحد:"
-        },
-        guestInfoDesc: {
-        en: `Invoice issue and delivery timestamps
-            — Customer identification and VAT details
-            — Approval statuses and rejection logs
-            — Associated credit or debit notes, linked automatically
-            — Digital signatures, UUIDs, and QR codes, fully compliant with ZATCA Phase 2`,
-        ar: `معلومات العميل والرقم الضريبي
-        — حالات الموافقة أو الرفض من ZATCA
-        — الملاحظات المدينة والدائنة المرتبطة تلقائياً
-        — التوقيعات الرقمية، وUUID، ورموز QR متوافقة بالكامل مع المرحلة الثانية من ZATCA`
-        },
-        workGuide: {
-        en: "Clear Workflow for Every Finance Team A structured invoicing process with:",
-        ar: "سير عمل واضح لفريق الشؤون المالية عملية فوترية منظمة تشمل:"
-        },
-        workGuideDesc: {
-        en: `Seamless steps from creation to ZATCA submission
-        — Mandatory fields validation before sending
-        — Automatic deadline reminders
-        — Full activity log of staff handling invoices and corrections`,
-        ar: `خطوات متسلسلة من الإنشاء حتى الإرسال إلى ZATCA
-        — التحقق من الحقول المطلوبة قبل الإرسال
-        — تذكيرات تلقائية بالمواعيد النهائية
-        — سجل نشاط كامل للموظفين المسؤولين عن الفواتير والتعديلات`
-        },
-        transform: { en: "Transform how your company handles invoicing", ar: "حوّل طريقة إدارة الفوترة في شركتك" },
-        transformDesc: {
-        en: "Kpi delivers tangible improvements across all aspects.",
-        ar: "تقدم Kpi تحسينات ملموسة في جميع الجوانب."
-        },
-        faq: { en: "Frequently Asked Questions", ar: "الأسئلة الشائعة" },
-        streamline: { en: "Is your business ready for ZATCA Phase 2 compliance?", ar: "هل عملك جاهز للامتثال للمرحلة الثانية من ZATCA؟" },
-        join: {
-        en: "Join companies across Saudi Arabia who are already saving time and staying compliant with Kpi.com",
-        ar: "انضم إلى الشركات التي بدأت التوفير وضمان الامتثال مع Kpi.com"
-        },
-        tryNow: { en: "Try for Free", ar: "احجز عرضًا توضيحيًا" },
-        schedule: { en: "Get started", ar: "ابدأ الآن" },
-        orCall: { en: "Or call us at:", ar: "أو اتصل بنا:" },
-        cards: {
-        time: { en: " Cloud-Based Platform", ar: " منصة قائمة على السحابة" },
-        time_desc: { en: "Kpi.com operates entirely in the cloud, so you can manage and issue invoices from anywhere with internet access. It enables seamless communication with ZATCA’s official system without the need for local installations.", ar: "يعمل نظام Kpi.com بالكامل من خلال السحابة، مما يتيح لك إصدار وإدارة الفواتير من أي مكان يتوفر فيه اتصال بالإنترنت. كما يدعم النظام التكامل المباشر مع منصة هيئة الزكاة (ZATCA) دون الحاجة إلى تثبيتات محلية." },
-        revenue: { en: " Integrated with ZATCA API", ar: " تكامل مباشر مع واجهة ZATCA البرمجية (API)" },
-        revenue_desc: { en: "The platform is directly connected to the ZATCA e-Invoicing Integration Portal through certified API access, ensuring that invoices are submitted securely and in real-time.", ar: "يرتبط النظام مباشرة ببوابة التكامل الإلكتروني الخاصة بـ ZATCA عبر واجهة API معتمدة، مما يضمن إرسال الفواتير بشكل آمن وفي الوقت الفعلي." },
-        staff: { en: " Tamper-Proof Infrastructure", ar: " بنية محمية ضد التلاعب" },
-        staff_desc: { en: "Kpi.com includes built-in protection against invoice manipulation. The system prevents unauthorized changes and ensures that invoice data remains intact and legally compliant.", ar: "يوفر Kpi.com آلية حماية مدمجة تمنع أي تعديل غير مصرح به على الفواتير. يضمن النظام أن تبقى بيانات الفاتورة سليمة ومتوافقة قانونياً." },
-        satisfaction: { en: " Full Invoice Archiving", ar: " أرشفة كاملة لجميع الفواتير" },
-        satisfaction_desc: { en: "Every invoice issued through Kpi.com is automatically stored and indexed. This ensures that all records are retained for auditing, reporting, and ZATCA compliance purposes.", ar: "يتم حفظ كل فاتورة يتم إصدارها من خلال Kpi.com بشكل تلقائي ومنظم، مما يضمن إمكانية الرجوع إليها لأغراض التدقيق والتقارير ومتطلبات الامتثال مع ZATCA." },
-        add: {en: " Advanced Security Controls", ar: " ضوابط أمان متقدمة"},
-        add_desc: {en: "Our system is built to detect and log any manual alterations, suspicious behavior, or tampering attempts. It guarantees that no sensitive information is leaked or lost during invoice creation and transmission.", ar:"يتميز النظام بالقدرة على اكتشاف وتسجيل أي تعديل يدوي أو سلوك مشبوه أو محاولة تلاعب. كما يضمن عدم تسريب أو فقدان أي بيانات أثناء إنشاء الفاتورة أو إرسالها."},
+    placeholder: {
+      en: "Your name",
+      ru: "Ваше имя"
+    },
+    title: {
+      en: "Is your business ready for ZATCA compliance?",
+      ru: "Готов ли ваш бизнес к соблюдению требований ZATCA?"
+    },
+    subtitle: {
+      en: "Zatca deadlines coming up? Choose kpi.com to seamlessly get your accounts aligned.",
+      ru: "Приближаются сроки ZATCA? Выбирайте kpi.com для лёгкого соответствия требованиям."
+    },
+    tryBtn: {
+      en: "Try Integration",
+      ru: "Попробовать интеграцию"
+    },
+    formTitle: {
+      en: "Connect with Us Now",
+      ru: "Свяжитесь с нами"
+    },
+    demoBtn: {
+      en: "Get started",
+      ru: "Начать сейчас"
+    },
+    agree: {
+      en: "I agree to the processing of",
+      ru: "Я согласен на обработку"
+    },
+    personal: {
+      en: "privacy",
+      ru: "персональных данных"
+    },
+    commonProblems: {
+      en: "How kpi.com helps you get integrated?",
+      ru: "Как kpi.com помогает с интеграцией?"
+    },
+    bestChoice: {
+      en: "Kpi.com — Your Trusted ZATCA Integration Partner",
+      ru: "Kpi.com — ваш надежный партнер по интеграции с ZATCA"
+    },
+    guestInfo: {
+      en: "All Invoice Data in One Secure Dashboard Track every essential detail of your e-invoices, all in one place:",
+      ru: "Все данные счетов в одной защищённой панели. Отслеживайте каждый важный элемент в одном месте:"
+    },
+    guestInfoDesc: {
+      en: `Invoice issue and delivery timestamps
+          — Customer identification and VAT details
+          — Approval statuses and rejection logs
+          — Associated credit or debit notes, linked automatically
+          — Digital signatures, UUIDs, and QR codes, fully compliant with ZATCA Phase 2`,
+      ru: `Дата и время выставления и доставки счета
+  — Идентификация клиента и данные по НДС
+  — Статусы одобрения и отклонения
+  — Автоматически связанные кредитные и дебетовые уведомления
+  — Цифровые подписи, UUID и QR-коды, соответствующие ZATCA Phase 2`
+    },
+    workGuide: {
+      en: "Clear Workflow for Every Finance Team A structured invoicing process with:",
+      ru: "Чёткий рабочий процесс для каждой финансовой команды:"
+    },
+    workGuideDesc: {
+      en: `Seamless steps from creation to ZATCA submission
+  — Mandatory fields validation before sending
+  — Automatic deadline reminders
+  — Full activity log of staff handling invoices and corrections`,
+      ru: `Пошаговый процесс от создания до отправки в ZATCA
+  — Проверка обязательных полей перед отправкой
+  — Автоматические напоминания о сроках
+  — Полный журнал действий сотрудников`
+    },
+    transform: {
+      en: "Transform how your company handles invoicing",
+      ru: "Измените подход вашей компании к выставлению счетов"
+    },
+    transformDesc: {
+      en: "Kpi delivers tangible improvements across all aspects.",
+      ru: "Kpi предлагает реальные улучшения во всех аспектах."
+    },
+    faq: {
+      en: "Frequently Asked Questions",
+      ru: "Часто задаваемые вопросы"
+    },
+    streamline: {
+      en: "Is your business ready for ZATCA Phase 2 compliance?",
+      ru: "Готов ли ваш бизнес к этапу 2 соответствия ZATCA?"
+    },
+    join: {
+      en: "Join companies across Saudi Arabia who are already saving time and staying compliant with Kpi.com",
+      ru: "Присоединяйтесь к компаниям, которые уже экономят время и соблюдают требования с помощью Kpi.com"
+    },
+    tryNow: {
+      en: "Try for Free",
+      ru: "Попробовать бесплатно"
+    },
+    schedule: {
+      en: "Get started",
+      ru: "Начать"
+    },
+    orCall: {
+      en: "Or call us at:",
+      ru: "Или позвоните нам:"
+    },
+    cards: {
+      time: {
+        en: " Cloud-Based Platform",
+        ru: " Облачная платформа"
+      },
+      time_desc: {
+        en: "Kpi.com operates entirely in the cloud...",
+        ru: "Kpi.com работает полностью в облаке..."
+      },
+      revenue: {
+        en: " Integrated with ZATCA API",
+        ru: " Интеграция с API ZATCA"
+      },
+      revenue_desc: {
+        en: "The platform is directly connected...",
+        ru: "Платформа напрямую подключена..."
+      },
+      staff: {
+        en: " Tamper-Proof Infrastructure",
+        ru: " Защищённая инфраструктура"
+      },
+      staff_desc: {
+        en: "Kpi.com includes built-in protection...",
+        ru: "В Kpi.com встроена защита от подделок..."
+      },
+      satisfaction: {
+        en: " Full Invoice Archiving",
+        ru: " Полная архивация счетов"
+      },
+      satisfaction_desc: {
+        en: "Every invoice issued through Kpi.com...",
+        ru: "Каждый счет, выставленный через Kpi.com..."
+      },
+      add: {
+        en: " Advanced Security Controls",
+        ru: " Расширенные средства безопасности"
+      },
+      add_desc: {
+        en: "Our system is built to detect...",
+        ru: "Наша система фиксирует все подозрительные действия..."
       }
+    },
+    button: {
+      en: "Learn more",
+      ru: "Узнать больше"
+    },
+    third_one: {
+      en: "Lorem ipsum dolor sit amet.",
+      ru: "Lorem ipsum dolor sit amet"
+    },
+    third_two: {
+      en: "Lorem ipsum dolor sit amet.",
+      ru: "Lorem ipsum dolor sit amet"
+    },
+    third_three: {
+      en: "Lorem ipsum dolor sit amet.",
+      ru: "Lorem ipsum dolor sit amet"
+    },
+    third_four: {
+      en: "Lorem ipsum dolor sit amet.",
+      ru: "Lorem ipsum dolor sit amet"
+    },
+    third_five: {
+      en: "Lorem ipsum dolor sit amet.",
+      ru: "Lorem ipsum dolor sit amet"
+    },
+    team: {
+      en: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempore.",
+      ru: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempore."
+    },
+    team_btn: {
+      en: "Learn more",
+      ru: "Узнать больше"
+    },
+    card_one: {
+      en: "Lorem ipsum dolor sit amet",
+      ru:"Lorem ipsum dolor sit amet"
+    },
+    card_two: {
+      en: "Lorem ipsum dolor sit amet",
+      ru:"Lorem ipsum dolor sit amet"
+    },
+    card_three: {
+      en: "Lorem ipsum dolor sit amet",
+      ru:"Lorem ipsum dolor sit amet"
+    },
+    card_four: {
+      en: "Lorem ipsum dolor sit amet",
+      ru:"Lorem ipsum dolor sit amet"
+    },
+    phone_one_title: {
+      en: "Web lorem ipsum",
+      ru: "Web lorem ipsum"
+    },
+    phone_two_title: {
+      en: "Web lorem ipsum",
+      ru: "Web lorem ipsum"
+    },
+    phone_three_title: {
+      en: "Web lorem ipsum",
+      ru: "Web lorem ipsum"
+    },
+    phone_one_desc: {
+      en: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque corrupti maiores suscipit exercitationem aperiam, architecto quas dolorem maxime odit!",
+      ru: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque corrupti maiores suscipit exercitationem aperiam, architecto quas dolorem maxime odit!"
+    },
+    phone_two_desc: {
+      en: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque corrupti maiores suscipit exercitationem aperiam, architecto quas dolorem maxime odit!",
+      ru: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque corrupti maiores suscipit exercitationem aperiam, architecto quas dolorem maxime odit!"
+    },
+    phone_three_desc: {
+      en: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque corrupti maiores suscipit exercitationem aperiam, architecto quas dolorem maxime odit!",
+      ru: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque corrupti maiores suscipit exercitationem aperiam, architecto quas dolorem maxime odit!"
+    },
+    three_one_title: {
+      en: "lorem ipsuum dolor",
+      ru: "lorem ipsum dolor"
+    },
+    three_two_title: {
+      en: "lorem ipsuum dolor",
+      ru: "lorem ipsum dolor "
+    },
+    three_three_title: {
+      en: "lorem ipsuum dolor",
+      ru: "lorem ipsum dolor "
+    },
+    three_one_desc: {
+      en: "lorem ipsuum dolor",
+      ru: "lorem ipsum dolor sit amet"
+    },
+    three_two_desc: {
+      en: "lorem ipsuum dolor",
+      ru: "lorem ipsum dolor sit amet"
+    },
+    three_three_desc: {
+      en: "lorem ipsuum dolor",
+      ru: "lorem ipsum dolor sit amet"
+    },
+    three_one_unique: {
+      en: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquid unde molestias quaerat maiores similique hic nisi amet quas nam.",
+      ru: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquid unde molestias quaerat maiores similique hic nisi amet quas nam."
+    },
+    three_two_unique: {
+      en: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquid unde molestias quaerat maiores similique hic nisi amet quas nam.",
+      ru: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquid unde molestias quaerat maiores similique hic nisi amet quas nam."
+    },
+    three_three_unique: {
+      en: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquid unde molestias quaerat maiores similique hic nisi amet quas nam.",
+      ru: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquid unde molestias quaerat maiores similique hic nisi amet quas nam."
+    },
+    
   };
+
+
   const faqData = [
-    {
-        question: {
-        en: 'Есть ли ограничение по количеству локаций в WorkPace?',
-        ar: 'ما هي فاتورة؟'
-        },
-        answer: {
-        en: 'Нет, количество локаций в WorkPace неограниченно.',
-        ar: 'فاتورة" هي منصة الفوترة الإلكترونية الوطنية في المملكة العربية السعودية والتي أطلقتها هيئة الزكاة والضريبة والجمارك (ZATCA). يجب على جميع الشركات إصدار الفواتير إلكترونيًا وإرسالها من خلال هذه المنصة. في المرحلة الثانية، أصبح من الإلزامي إرسال الفواتير مباشرة إلى نظام "فاتورة" باستخدام أنظمة إلكترونية معتمدة مثل Kpi.com'
-        }
+  {
+    question: {
+      en: 'Is there a location limit in WorkPace?',
+      ru: 'Есть ли ограничение по количеству локаций в WorkPace?'
     },
-    {
-        question: {
-        en: 'Как работает WorkPace через подключение внешних устройств?',
-        ar: 'ما الفرق بين الفاتورة الضريبية والفاتورة الضريبية المبسطة؟'
-        },
-        answer: {
-        en: " При интеграции WorkPace с внешними устройствами (например Hikvision) отметка сотрудника происходит автоматически с распознаванием лица через подключенное устройство.",
-        ar: 'عادةً ما يتم إصدار الفاتورة الضريبية للمعاملات بين الشركات (B2B) وتحتوي على تفاصيل مثل الرقم الضريبي للمشتري. أما الفاتورة الضريبية المبسطة فتُستخدم في المعاملات مع الأفراد (B2C) وتحتوي على معلومات أقل تفصيلاً.'
-        }
+    answer: {
+      en: 'No, the number of locations in WorkPace is unlimited.',
+      ru: 'Нет, количество локаций в WorkPace неограниченно.'
+    }
+  },
+  {
+    question: {
+      en: 'How does WorkPace integrate with external devices?',
+      ru: 'Как работает WorkPace через подключение внешних устройств?'
     },
-    {
-        question: {
-        en: 'Влияет ли способ подключения на стоимость?',
-        ar: 'هل يجب أن تحتوي كل فاتورة على رمز؟ QR'
-        },
-        answer: {
-        en: ' Нет, метод подключения WorkPace не влияет на стоимость сервиса.',
-        ar: ' نعم، وفقًا للوائح هيئة الزكاة (ZATCA)، يجب أن تتضمن جميع الفواتير الإلكترونية رمز QR. يقوم نظام Kpi.com بإنشاء رموز QR المطلوبة تلقائيًا لكل من الفواتير القياسية والمبسطة لضمان التوافق الكامل.'
-        }
+    answer: {
+      en: 'When integrated with devices like Hikvision, employee tracking is automatic through face recognition.',
+      ru: 'При интеграции с такими устройствами, как Hikvision, учет сотрудников происходит автоматически через распознавание лиц.'
+    }
+  },
+  {
+    question: {
+      en: 'Does the connection method affect the price?',
+      ru: 'Влияет ли способ подключения на стоимость?'
     },
-    {
-        question: {
-        en: 'Какие отчеты имеются в WorkPace?',
-        ar: 'هل يجب أن تحتوي كل فاتورة على رمز؟ QR'
-        },
-        answer: {
-        en: ' Workpace формирует все необходимые отчеты по отработанным часам: по посещаемости, опозданиям, переработкам и другие.',
-        ar: ' نعم، وفقًا للوائح هيئة الزكاة (ZATCA)، يجب أن تتضمن جميع الفواتير الإلكترونية رمز QR. يقوم نظام Kpi.com بإنشاء رموز QR المطلوبة تلقائيًا لكل من الفواتير القياسية والمبسطة لضمان التوافق الكامل.'
-        }
+    answer: {
+      en: 'No, the connection method does not affect the service cost.',
+      ru: 'Нет, метод подключения не влияет на стоимость сервиса.'
+    }
+  },
+  {
+    question: {
+      en: 'What reports does WorkPace provide?',
+      ru: 'Какие отчеты имеются в WorkPace?'
     },
-    {
-        question: {
-        en: 'Как подключить WorkPace?',
-        ar: 'هل يجب أن تحتوي كل فاتورة على رمز؟ QR'
-        },
-        answer: {
-        en: 'Оставь заявку на сайте, мы проконсультируем по всем вопросам и поможем с подключением.',
-        ar: ' نعم، وفقًا للوائح هيئة الزكاة (ZATCA)، يجب أن تتضمن جميع الفواتير الإلكترونية رمز QR. يقوم نظام Kpi.com بإنشاء رموز QR المطلوبة تلقائيًا لكل من الفواتير القياسية والمبسطة لضمان التوافق الكامل.'
-        }
+    answer: {
+      en: 'WorkPace provides all necessary reports: attendance, tardiness, overtimes, etc.',
+      ru: 'WorkPace формирует все необходимые отчеты по посещаемости, опозданиям, переработкам и другим аспектам.'
+    }
+  },
+  {
+    question: {
+      en: 'How to connect WorkPace?',
+      ru: 'Как подключить WorkPace?'
     },
-  ];
+    answer: {
+      en: 'Leave a request on the website — we will help you.',
+      ru: 'Оставьте заявку на сайте, мы вас проконсультируем и поможем с подключением.'
+    }
+  }
+];
+
   const [activeIndex, setActiveIndex] = useState(null);
   const toggleFAQ = (index) => setActiveIndex(prev => (prev === index ? null : index));
 
@@ -171,7 +349,7 @@ const Home = () => {
               target="_blank" 
               rel="noopener noreferrer"
             >
-             <button className='third_btn third_btn fade-in-up'>leran more</button>
+             <button className='third_btn third_btn fade-in-up'>{t.button[lang]}</button>
             </a>
               </div>
             </div>
@@ -197,16 +375,16 @@ const Home = () => {
 
       <div className="third_section_one">
         <div className="third_section_one_box im">
-          <h2>Lorem ipsum dolor sit amet.</h2>
+          <h2>{t.third_one[lang]}</h2>
         </div>
         <div className='sections'>
          <div className="div_box">
             <div className='child'>
-            <h1>Lorem ipsum dolor sit amet.</h1>
+            <h1>{t.third_two[lang]}</h1>
             <img src="https://static.tildacdn.pro/tild3465-3162-4934-a333-343464386138/Card1.jpg" alt="" />
           </div>
            <div className='child_second'>
-            <h1>Lorem ipsum dolor sit amet.</h1>
+            <h1>{t.third_three[lang]}</h1>
             <div className='zkt_flex'>
               <button><i>HIKIVISION</i></button>
             <div className='zkt'>
@@ -216,11 +394,11 @@ const Home = () => {
           </div>
          </div>
           <div className="child_third">
-            <h1>Lorem ipsum dolor sit amet.</h1>
+            <h1>{t.third_four[lang]}</h1>
           </div> 
         </div>
         <div className="third_section_one_box white">
-          <h2>Lorem ipsum dolor sit amet Lorem, ipsum.</h2>
+          <h2>{t.third_five[lang]}</h2>
           <img src={card} alt="" />
         </div>
       </div>
@@ -248,8 +426,8 @@ const Home = () => {
       </div>
         <div className="third_team slide-in-left">
           <div className='third_left'>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempore.</p>
-          <button>Learn more</button>
+          <p>{t.team[lang]}</p>
+          <button>{t.team_btn[lang]}</button>
           </div>
           <div className='third_right'>
             <img src={banner} alt="" />
@@ -261,22 +439,22 @@ const Home = () => {
       <div className="third_cards">
         <div className="third_card zoom-in long">
           <p>01</p>
-          <h2>Lorem ipsum dolor sit amet. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, dicta.</h2>
+          <h2>{t.card_one[lang]}</h2>
           <img src={card2} alt="" />
         </div>
         <div className="third_card zoom-in">
           <p>02</p>
-          <h2>Lorem ipsum dolor sit amet.</h2>
+          <h2>{t.card_two[lang]}</h2>
           <img src={card2} alt="" />
         </div>
         <div className="third_card zoom-in ">
           <p>03</p>
-          <h2>Lorem ipsum dolor sit amet.</h2>
+          <h2>{t.card_three[lang]}</h2>
           <img src={card2} alt="" />
         </div>
         <div className="third_card zoom-in long">
           <p>04</p>
-          <h2>Lorem ipsum dolor sit amet.  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, dicta.</h2>
+          <h2>{t.card_four[lang]}</h2>
           <img src={card2} alt="" />
         </div>
       </div>
@@ -310,8 +488,8 @@ const Home = () => {
         <div className='phone_box'>
           <div className='phone_text'>
             <h4>01</h4>
-            <h3>Web Lorem, ipsum.</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque corrupti maiores suscipit exercitationem aperiam, architecto quas dolorem maxime odit!</p>
+            <h3>{t.phone_one_title[lang]}</h3>
+            <p>{t.phone_one_desc[lang]}</p>
           </div>
           <div className="phone_img">
             <img src={phone} alt="" />
@@ -334,8 +512,8 @@ const Home = () => {
         <div className='phone_box'>
           <div className='phone_text'>
             <h4>02</h4>
-            <h3>Web Lorem, ipsum.</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque corrupti maiores suscipit exercitationem aperiam, architecto quas dolorem maxime odit aut!</p>
+            <h3>{t.phone_two_title[lang]}</h3>
+            <p>{t.phone_two_desc[lang]}</p>
           </div>
           <div className="phone_img">
             <img src={phoneTwo} alt="" />
@@ -344,8 +522,8 @@ const Home = () => {
         <div className='phone_box'>
           <div className='phone_text'>
             <h4>03</h4>
-            <h3>Web Lorem, ipsum.</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque corrupti maiores suscipit exercitationem aperiam, architecto quas dolorem maxime odit aut!</p>
+            <h3>{t.phone_three_title[lang]}</h3>
+            <p>{t.phone_three_desc[lang]}</p>
           </div>
           <div className="phone_img">
             <img src={phoneTwo} alt="" />
@@ -356,24 +534,24 @@ const Home = () => {
       <div className='third_faq'>
         <div className="faq">
           <div className="faq_dark">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquid unde molestias quaerat maiores similique hic nisi amet quas nam.</p>
+            <p>{t.three_one_unique[lang]}</p>
           </div>
-          <h1>Loremdjashdkj</h1>
-          <p>Lorem, ipsum.</p>
+          <h1>{t.three_one_title[lang]}</h1>
+          <p>{t.three_one_desc[lang]}</p>
         </div>
         <div className="faq faq_second">
-          <div className="faq_dark">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquid unde molestias quaerat maiores similique hic nisi amet quas nam.</p>
+           <div className="faq_dark">
+            <p>{t.three_two_unique[lang]}</p>
           </div>
-          <h1>Loremdjashdkj</h1>
-          <p>Lorem, ipsum.</p>
+          <h1>{t.three_two_title[lang]}</h1>
+          <p>{t.three_two_desc[lang]}</p>
         </div>
         <div className="faq faq_third">
-          <div className="faq_dark">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquid unde molestias quaerat maiores similique hic nisi amet quas nam.</p>
+           <div className="faq_dark">
+            <p>{t.three_three_unique[lang]}</p>
           </div>
-          <h1>Loremdjashdkj</h1>
-          <p>Lorem, ipsum.</p>
+          <h1>{t.three_three_title[lang]}</h1>
+          <p>{t.three_three_desc[lang]}</p>
         </div>
       </div>
 
@@ -382,12 +560,12 @@ const Home = () => {
         {faqData.map((item, i) => (
           <div className={`faq-item ${activeIndex === i ? 'active fade-in-up' : 'fade-in-up'}`} key={i} onClick={() => toggleFAQ(i)}>
             <button className="faq-question">
-              {lang === 'ar' ? item.question.ar : item.question.en}
+              {lang === 'ru' ? item.question.ru : item.question.en}
               <span>{activeIndex === i ? <IoClose/> : <FaPlus/>}</span>
             </button>
             {activeIndex === i && (
               <div className="faq-answer">
-                {lang === 'ar' ? item.answer.ar : item.answer.en}
+                {lang === 'ru' ? item.answer.ru : item.answer.en}
               </div>
             )}
           </div>

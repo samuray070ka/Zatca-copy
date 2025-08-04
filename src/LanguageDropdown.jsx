@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLang } from './LanguageContext';
-import "./index.css"
-import './third.css'
+import "./index.css";
+import './third.css';
 
 const languages = [
   {
@@ -10,9 +10,9 @@ const languages = [
     flag: 'https://flagcdn.com/w40/gb.png',
   },
   {
-    code: 'ar',
-    label: 'Arabic',
-    flag: 'https://flagcdn.com/w40/sa.png', // Saudiya Arabistoni bayrog'i
+    code: 'ru',
+    label: 'Russian',
+    flag: 'https://flagcdn.com/w40/ru.png', // Rossiya bayrog'i
   },
 ];
 
