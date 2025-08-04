@@ -1,49 +1,3 @@
-/* .third{
-    width: 80%;
-    height: 80px;
-    margin: auto;
-    border-radius: 30px;
-    background-color:#1E3A8A;
-    margin-top: 30px;
-    margin-bottom: 10px;
-}
-.language-dropdown{
-    top: 50px;
-    right: 180px;
-}
-.logoo{
-    top: 40px;
-    left: 170px;
-}
-.logof{
-    top: 55px;
-    left: 250px;
-}
-.home{
-    background-color: #1E3A8A;
-    width: 80%;
-    min-height: 420px;
-    margin: auto;
-    border-radius: 30px;
-}
-.box{
-    transform: translateY(-200px);
-    width: 80%;
-    justify-content: space-between;
-}
-.left{
-    width: 60%;
-    height: 80%;
-    padding: 0 30px;
-}
-.home .dark .box .left .na h1{
-    font-size: 50px;
-}
-.right{
-    width: 40%;
-    display: flex;
-    align-items: center;
-} */
 .third_btn{
     width: 140px;
     height: 40px;
@@ -358,49 +312,6 @@ body{
     color: #1E3A8A;
     background-color: #fff;
 }
-.third_cards{
-    width: 90%;
-    margin: auto;
-    min-height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.third_card{
-    display: flex;
-    /* flex-direction: column; */
-    width: 40%;
-    height: 300px;
-    border-radius: 30px;
-    margin-bottom: 20px;
-    padding: 40px 40px;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-    background-color: #fff;
-}
-.third_card p{
-    font-size: 25px;
-    font-weight: 900;
-    color: #1E3A8A;
-    position: absolute;
-    transform: translateY(-120px) translateX(-20px);
-}
-.third_card h2{
-    color: #1E3A8A;
-    width: 100%;
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-.third_card img{
-    width: 300px;
-    height: 150px;
-}
-.long{
-    min-height: 100px;
-    width: 59%;
-}
 .third_faq {
   width: 90%;
   height: 300px;
@@ -443,52 +354,6 @@ body{
   visibility: visible;
   font-size: 18px;
 }
-@media screen and (max-width:1135px) {
-    .third_card{
-        display: flex;
-        flex-direction: column;
-    }
-    .third_card p{
-        transform: translateY(-40px) ;
-    }
-}
-@media screen and (max-width:790px) {
-    .third_cards{
-        flex-wrap: wrap;
-    }
-    .third_card{
-        align-items: normal;
-        width: 100%;
-    }
-    .third_team{
-        align-items: center;
-        min-height: 800px;
-        flex-wrap: wrap;
-    }
-    .third_left{
-        width: 100%;
-    }
-    .third_right{
-        width: 100%;
-    }
-    .third_faq{
-        flex-wrap: wrap;
-        margin-bottom: 350px;
-    }
-    .faq{
-        height: 200px;
-        margin-bottom: 20px;
-        width: 100%;
-    }
-}
-@media screen and (max-width:450px) {
-    .third_card h2{
-        font-size: 18px;
-    }
-    .third_card p{
-        transform: translateY(-35px);
-    }
-}
 @media screen and (max-width:600px) {
     .third_team{
         min-height: 500px;
@@ -504,7 +369,6 @@ body{
     .home .dark .box .left .na h1{
         font-size: 40px;
     }
-
 }
 @media screen and (max-width:650px) {
     .right{
@@ -869,7 +733,6 @@ body{
     height: 300px;
     display: flex;
     margin-bottom: 20px;
-    /* align-items: center; */
 }
 .one p{
     position: absolute;
@@ -1075,7 +938,6 @@ body{
 @media screen and (max-width:580px) {
     .thir_card{
         width: 100%;
-        /* margin-bottom: 20px; */
     }
     .thir_cards{
         margin-bottom: 900px;
