@@ -846,4 +846,257 @@ body{
     background: url(https://static.tildacdn.pro/tild3233-3137-4333-b663-343935623935/Frame_1321314435.jpg) no-repeat center/cover;
 }
 .faq_third{
-    background: url(https://optim.tildacdn.pro/tild3861-6466-4135-a563-313738626537/-/cover/754x560/center/center/-/format/webp/Frame_1321314436.jpg) no-repeat center/cover;}
+    background: url(https://optim.tildacdn.pro/tild3861-6466-4135-a563-313738626537/-/cover/754x560/center/center/-/format/webp/Frame_1321314436.jpg) no-repeat center/cover;
+}
+.faq-answer.open{
+    transform: translateY(-15px);
+}
+.thir_cards{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    height: 750px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.thir_card{
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 50px 30px;
+}
+.one{
+    width: 69%;
+    height: 300px;
+    display: flex;
+    margin-bottom: 20px;
+    /* align-items: center; */
+}
+.one p{
+    position: absolute;
+    font-size: 35px;
+    font-weight: 600;
+    transform: translateY(-20px);
+    color: #1E3A8A;
+}
+.one h2{
+    margin-top: 30px;
+    width: 100%;
+    font-size: 28px;
+    font-weight: 500;
+    transform: translateY(-10px);
+}
+.one img{
+    transform: translateY(50px);
+}
+.twoo{
+    width: 29%;
+    position: relative;
+    height: 300px;
+    margin-bottom: 20px;
+}
+.twoo h2{
+    margin-top: 30px;
+    width: 100%;
+    font-size: 26px;
+    font-weight: 500;
+    transform: translateY(-50px);
+}
+.twoo img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    transform: translateY(-201px) translateX(-30px);
+    border-radius: 30px;
+}
+.twoo p{
+    font-size: 35px;
+    font-weight: 600;
+    color: #1E3A8A;
+    transform: translateY(-20px);
+}
+.three{
+    width: 39%;
+    height: 400px;
+    overflow: hidden;
+}
+.three p{
+    font-size: 35px;
+    font-weight: 600;
+    color: #1E3A8A;
+}
+.three h2{
+    font-size: 26px;
+    font-weight: 500;
+}
+.three img{
+    transform: translateX(100px) translateY(45px);
+}
+.four{
+    height: 400px;
+    width: 59%;
+    display: flex;
+}
+.four p{
+    position: absolute;
+    font-size: 35px;
+    font-weight: 600;
+    color: #1E3A8A;
+}
+.four h2{
+    font-size: 26px;
+    font-weight: 500;
+    width: 45%;
+    margin-top: 50px;
+}
+.four img{
+    position: absolute;
+    width: 100%;
+    transform: translateY(-30px) translateX(-30px);
+    z-index: -1;
+    border-radius: 30px;
+}
+.third_team{
+    filter: blur(0);
+}
+@media screen and (max-width:1260px) {
+    .thir_cards{
+        width: 95%;
+    }
+    .three img{
+        transform: translateX(30px) translateY(40px);
+    }
+    .four img{
+        transform: translateY(15px) translateX(-30px);
+    }
+}
+@media screen and (max-width:1200px) {
+    .twoo h2{
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 1120px) {
+    .three img{
+        transform: translateY(0);
+    }
+    .four img{
+        transform: translateY(55px) translateX(-30px);
+    }
+    .four h2{
+        width: 60%;
+    }
+    .twoo h2{
+        font-size: 22px;
+    }
+}
+@media screen and (max-width:1000px) {
+    .thir_card{
+        height: 420px;
+        width: 49%;
+    }
+    .thir_cards{
+        margin-bottom: 150px;
+    }
+    .one{
+        display: flex;
+        flex-direction: column;
+    }
+    .one h2{
+        transform: translateY(20px);
+        font-size: 22px;
+    }
+    .twoo h2{
+        transform: translateY(-30px);
+    }
+    .three h2{
+        font-size: 22px;
+        transform: translateY(10px);
+    }
+    .three img{
+        width: 100%;
+        transform: translateY(40px);
+    }
+    .four h2{  
+        font-size: 22px;
+        width: 100%;
+        transform: translateY(10px); 
+    }
+    .four img{
+        transform: translateY(120px) translateX(-30px);
+        height: 60%;
+    }
+}
+@media screen and (max-width:650px) {
+    .one p{
+        font-size: 30px;
+    }
+    .one h2{
+        font-size: 20px;
+    }
+    .thir_card{
+        height: 380px;
+    }
+    .one img{
+        width: 100%;
+        height: 100%;
+    }
+    .twoo p{
+        font-size: 30px;
+    }
+    .twoo h2{
+        font-size: 20px;
+    }
+    .twoo img{
+        transform: translateY(-185px) translateX(-30px);
+    }
+    .three p{
+        font-size: 30px;
+        transform: translateY(-20px);
+    }
+    .three h2{
+        font-size: 20px;
+        transform: translateY(0);
+    }
+    .three img{
+        height: 60%;
+    }
+    .four p{
+        font-size: 30px;
+        transform: translateY(-20px);
+    }
+    .four h2{
+        transform: translateY(-5px);
+    }
+    .four img{
+        height: 50%;
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width:580px) {
+    .thir_card{
+        width: 100%;
+        /* margin-bottom: 20px; */
+    }
+    .thir_cards{
+        margin-bottom: 900px;
+    }
+    .twoo img{
+        margin-top: 30px;
+    }
+    .one img, .three img{
+        height: 65%;
+    }
+    .four{
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width:485px) {
+    .twoo img{
+        margin-top: 0px;
+    }
+}
+@media screen and (max-width:660px) {
+    .phone_text h4{
+        transform: translateY(20px);
+    }
+}

@@ -4,7 +4,6 @@ import { IoIosArrowForward } from "react-icons/io";
 import { BsWhatsapp } from "react-icons/bs";
 import { useLang } from './LanguageContext.jsx';
 import LanguageDropdown from './LanguageDropdown.jsx';
-import img1 from './img1.png'
 import logoo from "./image-removebg-preview21.png"
 import MetaTags from './MetaTags.jsx';
 import './third.css'
@@ -17,6 +16,7 @@ import { FaPlus } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 const Home = () => {
   const { lang } = useLang(); 
+
   const t = {
     placeholder: {
       en: "Your name",
@@ -195,19 +195,19 @@ const Home = () => {
       ru: "Узнать больше"
     },
     card_one: {
-      en: "Lorem ipsum dolor sit amet",
+      en: "Lorem ipsum dolor sit amet lorem alskdl a;dkaks aldsl;kd;",
       ru:"Lorem ipsum dolor sit amet"
     },
     card_two: {
-      en: "Lorem ipsum dolor sit amet",
+      en: "Lorem ipsum dolor sit amet lorem alskd",
       ru:"Lorem ipsum dolor sit amet"
     },
     card_three: {
-      en: "Lorem ipsum dolor sit amet",
+      en: "Lorem ipsum dolor sit amet lorem alskdl a;dkaks aldsl;kd;",
       ru:"Lorem ipsum dolor sit amet"
     },
     card_four: {
-      en: "Lorem ipsum dolor sit amet",
+      en: "Lorem ipsum dolor sit amet lorem alskdl a;dkaks aldsl;kd;",
       ru:"Lorem ipsum dolor sit amet"
     },
     phone_one_title: {
@@ -273,7 +273,6 @@ const Home = () => {
     
   };
 
-
   const faqData = [
   {
     question: {
@@ -325,7 +324,7 @@ const Home = () => {
       ru: 'Оставьте заявку на сайте, мы вас проконсультируем и поможем с подключением.'
     }
   }
-];
+  ];
 
   const [activeIndex, setActiveIndex] = useState(null);
   const toggleFAQ = (index) => setActiveIndex(prev => (prev === index ? null : index));
@@ -372,7 +371,6 @@ const Home = () => {
         </div>
       </div>
 
-
       <div className="third_section_one">
         <div className="third_section_one_box im">
           <h2>{t.third_one[lang]}</h2>
@@ -414,7 +412,7 @@ const Home = () => {
         />
       </div>
 
-      <h1 className='text'>{t.bestChoice[lang]}</h1>
+      {/* <h1 className='text'>{t.bestChoice[lang]}</h1>
       <div className='img_box'>
         <div className='box_left'>
           <h3>{t.guestInfo[lang]}</h3>
@@ -423,7 +421,7 @@ const Home = () => {
         <div className='box_right sd'>
           <img src={img1} alt="" />
         </div>
-      </div>
+      </div> */}
         <div className="third_team slide-in-left">
           <div className='third_left'>
           <p>{t.team[lang]}</p>
@@ -434,56 +432,30 @@ const Home = () => {
           </div>
         </div>
 
-      {/* <img className='img' src={img3} alt="" /> */}
-
-      <div className="third_cards">
-        <div className="third_card zoom-in long">
+      <div className="thir_cards">
+        <div className="thir_card zoom-in one">
           <p>01</p>
           <h2>{t.card_one[lang]}</h2>
           <img src={card2} alt="" />
         </div>
-        <div className="third_card zoom-in">
+        <div className="thir_card zoom-in twoo">
           <p>02</p>
           <h2>{t.card_two[lang]}</h2>
-          <img src={card2} alt="" />
+          <img src="https://optim.tildacdn.pro/tild3061-6362-4035-b432-633432623063/-/cover/754x562/center/center/-/format/webp/Frame_1321314146.jpg" alt="" />
         </div>
-        <div className="third_card zoom-in ">
+        <div className="thir_card zoom-in three">
           <p>03</p>
           <h2>{t.card_three[lang]}</h2>
           <img src={card2} alt="" />
         </div>
-        <div className="third_card zoom-in long">
+        <div className="thir_card zoom-in four">
           <p>04</p>
           <h2>{t.card_four[lang]}</h2>
-          <img src={card2} alt="" />
+          <img src="https://static.tildacdn.pro/tild3562-3136-4030-a364-363064313432/Frame_1321314433.png" alt="" />
         </div>
       </div>
 
       <h1 className='text'>{t.transform[lang]}</h1>
-      {/* <p className='text_p'>{t.transformDesc[lang]}</p> */}
-
-      {/* <div className="cards">
-        <div className="card">
-          <h2>{t.cards.time[lang]}</h2>
-          <p>{t.cards.time_desc[lang]}</p>
-        </div>
-        <div className="card">
-          <h2>{t.cards.revenue[lang]}</h2>
-          <p>{t.cards.revenue_desc[lang]}</p>
-        </div>
-        <div className="card">
-          <h2>{t.cards.staff[lang]}</h2>
-          <p>{t.cards.staff_desc[lang]}</p>
-        </div>
-        <div className="card">
-          <h2>{t.cards.satisfaction[lang]}</h2>
-          <p>{t.cards.satisfaction_desc[lang]}</p>
-        </div>
-        <div className="card">
-          <h2>{t.cards.add[lang]}</h2>
-          <p>{t.cards.add_desc[lang]}</p>
-        </div>
-      </div> */}
       <div className="phoned">
         <div className='phone_box'>
           <div className='phone_text'>
@@ -503,11 +475,6 @@ const Home = () => {
             allowFullScreen
             title="Hotel CRM Introduction Video"
           />
-          {/* <div className='play'>
-            <div className='dss'>
-              <VscPlay className='add'/>
-            </div>
-          </div> */}
         </div>
         <div className='phone_box'>
           <div className='phone_text'>
@@ -564,7 +531,7 @@ const Home = () => {
               <span>{activeIndex === i ? <IoClose/> : <FaPlus/>}</span>
             </button>
             {activeIndex === i && (
-              <div className="faq-answer">
+              <div className={`faq-answer ${activeIndex === i ? 'open' : ''}`}>
                 {lang === 'ru' ? item.answer.ru : item.answer.en}
               </div>
             )}

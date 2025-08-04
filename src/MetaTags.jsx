@@ -12,7 +12,7 @@ const MetaTags = ({ lang }) => {
       url: "https://zatka.kpi.com/en/",
       locale: "en_US"
     },
-    ar: {
+    ru: {
       title: "تكامل ZATCA ERP - برنامج KPI",
       description: "يتكامل نظام ERP الخاص ببرنامج KPI بسلاسة مع نظام الفوترة الإلكترونية ZATCA. متوافق وذكي ومثالي للشركات الصغيرة والمتوسطة في المملكة العربية السعودية.",
       ogTitle: "تكامل ZATCA ERP - برنامج KPI",
