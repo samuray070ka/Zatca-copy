@@ -993,3 +993,15 @@ body{
         transform: translateY(20px);
     }
 }
+.third_left button{
+  width: 180px;
+}
+.third_left button:hover{
+    background-color: #ffffffa6;
+    border: 1px solid #1E3A8A;
+    color: #1E3A8A;
+}
+.third_left p{
+    font-size: 40px;
+    width: 80%;
+}

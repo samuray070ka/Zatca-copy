@@ -1514,3 +1514,6 @@ body{
 .btn_box{
   margin-top: 30px;
 }
+.thir_cards .one h2{
+  transform: translateY(0);
+}

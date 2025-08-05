@@ -218,14 +218,14 @@ const t = {
       uz: "Tabel va hisobotlarni avtomatik shakllantirish"
     },
     team: {
-      en: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempore.",
-      ru: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempore.",
-      uz: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempore."
+      en: "Automate communication with employees",
+      ru: "Автоматизируй коммуникацию с сотрудниками",
+      uz: "Xodimlar bilan muloqotni avtomatlashtiring"
     },
     team_btn: {
-      en: "Learn more",
-      ru: "Узнать больше",
-      uz: "Ko'proq bilish"
+      en: "Submit a request",
+      ru: "Оставить заявку",
+      uz: "So'rov yuborish"
     },
     card_one: {
       en: "Submission of applications for leave, sick leave, and business trips",
