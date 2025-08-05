@@ -14,317 +14,469 @@ import phone from './image-removebg-preview2.png'
 import phoneTwo from './image-removebg-preview (1).png'
 import { FaPlus } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
+import bot from './bot.png'
+import botTwo from './bot-2.png'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
+import { FaCheck } from "react-icons/fa6";
 const Home = () => {
   const { lang } = useLang(); 
 
-  const t = {
+const t = {
     placeholder: {
       en: "Your name",
-      ru: "Ваше имя"
+      ru: "Ваше имя",
+      uz: "Sizning ismingiz"
     },
     title: {
       en: "Is your business ready for ZATCA compliance?",
-      ru: "Готов ли ваш бизнес к соблюдению требований ZATCA?"
+      ru: "Готов ли ваш бизнес к соблюдению требований ZATCA?",
+      uz: "Sizning biznesingiz ZATCA talablariga tayyormi?"
     },
     subtitle: {
       en: "Zatca deadlines coming up? Choose kpi.com to seamlessly get your accounts aligned.",
-      ru: "Приближаются сроки ZATCA? Выбирайте kpi.com для лёгкого соответствия требованиям."
+      ru: "Приближаются сроки ZATCA? Выбирайте kpi.com для лёгкого соответствия требованиям.",
+      uz: "ZATCA muddatlari yaqinlashmoqda? Hisoblaringizni osongina muvofiqlashtirish uchun kpi.com ni tanlang."
     },
     tryBtn: {
       en: "Try Integration",
-      ru: "Попробовать интеграцию"
+      ru: "Попробовать интеграцию",
+      uz: "Integratsiyani sinab ko'rish"
     },
     formTitle: {
       en: "Connect with Us Now",
-      ru: "Свяжитесь с нами"
+      ru: "Свяжитесь с нами",
+      uz: "Hoziroq biz bilan bog'laning"
     },
     demoBtn: {
       en: "Get started",
-      ru: "Начать сейчас"
+      ru: "Начать сейчас",
+      uz: "Endi boshlash"
     },
     agree: {
       en: "I agree to the processing of",
-      ru: "Я согласен на обработку"
+      ru: "Я согласен на обработку",
+      uz: "Men qayta ishlashga roziman"
     },
     personal: {
       en: "privacy",
-      ru: "персональных данных"
+      ru: "персональных данных",
+      uz: "shaxsiy ma'lumotlar"
     },
     commonProblems: {
       en: "How kpi.com helps you get integrated?",
-      ru: "Как kpi.com помогает с интеграцией?"
+      ru: "Как kpi.com помогает с интеграцией?",
+      uz: "Kpi.com qanday qilib integratsiya qilishga yordam beradi?"
     },
     bestChoice: {
       en: "Kpi.com — Your Trusted ZATCA Integration Partner",
-      ru: "Kpi.com — ваш надежный партнер по интеграции с ZATCA"
+      ru: "Kpi.com — ваш надежный партнер по интеграции с ZATCA",
+      uz: "Kpi.com — Sizning ZATCA integratsiyasi bo'yicha ishonchli hamkoringiz"
     },
     guestInfo: {
       en: "All Invoice Data in One Secure Dashboard Track every essential detail of your e-invoices, all in one place:",
-      ru: "Все данные счетов в одной защищённой панели. Отслеживайте каждый важный элемент в одном месте:"
+      ru: "Все данные счетов в одной защищённой панели. Отслеживайте каждый важный элемент в одном месте:",
+      uz: "Barcha hisob-faktura ma'lumotlari bitta xavfsiz panelda. Elektron hisoblaringizning har bir muhim elementini bir joyda kuzating:"
     },
     guestInfoDesc: {
-      en: `Invoice issue and delivery timestamps
-          — Customer identification and VAT details
-          — Approval statuses and rejection logs
-          — Associated credit or debit notes, linked automatically
-          — Digital signatures, UUIDs, and QR codes, fully compliant with ZATCA Phase 2`,
-      ru: `Дата и время выставления и доставки счета
-  — Идентификация клиента и данные по НДС
-  — Статусы одобрения и отклонения
-  — Автоматически связанные кредитные и дебетовые уведомления
-  — Цифровые подписи, UUID и QR-коды, соответствующие ZATCA Phase 2`
+      en: "Invoice issue and delivery timestamps — Customer identification and VAT details — Approval statuses and rejection logs — Associated credit or debit notes, linked automatically — Digital signatures, UUIDs, and QR codes, fully compliant with ZATCA Phase 2",
+      ru: "Дата и время выставления и доставки счета — Идентификация клиента и данные по НДС — Статусы одобрения и отклонения — Автоматически связанные кредитные и дебетовые уведомления — Цифровые подписи, UUID и QR-коды, соответствующие ZATCA Phase 2",
+      uz: "Hisob-faktura chiqarish va yetkazib berish vaqtlari — Mijozni identifikatsiya qilish va NDS ma'lumotlari — Tasdiqlash holatlari va rad etish jurnallari — Avtomatik bog'langan kredit yoki debet eslatmalari — Raqamli imzo, UUID va QR-kodlar, ZATCA Phase 2 ga to'liq mos"
     },
     workGuide: {
       en: "Clear Workflow for Every Finance Team A structured invoicing process with:",
-      ru: "Чёткий рабочий процесс для каждой финансовой команды:"
+      ru: "Чёткий рабочий процесс для каждой финансовой команды:",
+      uz: "Har bir moliya jamoasi uchun aniq ish jarayoni:"
     },
     workGuideDesc: {
-      en: `Seamless steps from creation to ZATCA submission
-  — Mandatory fields validation before sending
-  — Automatic deadline reminders
-  — Full activity log of staff handling invoices and corrections`,
-      ru: `Пошаговый процесс от создания до отправки в ZATCA
-  — Проверка обязательных полей перед отправкой
-  — Автоматические напоминания о сроках
-  — Полный журнал действий сотрудников`
+      en: "Seamless steps from creation to ZATCA submission — Mandatory fields validation before sending — Automatic deadline reminders — Full activity log of staff handling invoices and corrections",
+      ru: "Пошаговый процесс от создания до отправки в ZATCA — Проверка обязательных полей перед отправкой — Автоматические напоминания о сроках — Полный журнал действий сотрудников",
+      uz: "Yaratishdan ZATCA ga yuborishgacha bo'lgan muammosiz bosqichlar — Yuborishdan oldin majburiy maydonlarni tekshirish — Avtomatik muddat eslatmalari — Hisob-fakturalar va tuzatishlar bilan ishlovchi xodimlarning to'liq faoliyat jurnali"
     },
     transform: {
       en: "Transform how your company handles invoicing",
-      ru: "Измените подход вашей компании к выставлению счетов"
+      ru: "Измените подход вашей компании к выставлению счетов",
+      uz: "Kompaniyangizning hisob-faktura bilan ishlash usulini o'zgartiring"
     },
     transformDesc: {
       en: "Kpi delivers tangible improvements across all aspects.",
-      ru: "Kpi предлагает реальные улучшения во всех аспектах."
+      ru: "Kpi предлагает реальные улучшения во всех аспектах.",
+      uz: "Kpi barcha jihatlarda sezilarli yaxshilanishlarni ta'minlaydi."
     },
     faq: {
       en: "Frequently Asked Questions",
-      ru: "Часто задаваемые вопросы"
+      ru: "Часто задаваемые вопросы",
+      uz: "Tez-tez so'raladigan savollar"
     },
     streamline: {
       en: "Is your business ready for ZATCA Phase 2 compliance?",
-      ru: "Готов ли ваш бизнес к этапу 2 соответствия ZATCA?"
+      ru: "Готов ли ваш бизнес к этапу 2 соответствия ZATCA?",
+      uz: "Sizning biznesingiz ZATCA Phase 2 ga muvofiqlashga tayyormi?"
     },
     join: {
       en: "Join companies across Saudi Arabia who are already saving time and staying compliant with Kpi.com",
-      ru: "Присоединяйтесь к компаниям, которые уже экономят время и соблюдают требования с помощью Kpi.com"
+      ru: "Присоединяйтесь к компаниям, которые уже экономят время и соблюдают требования с помощью Kpi.com",
+      uz: "Saudiya Arabistonidagi kompaniyalarga qo'shiling, ular allaqachon vaqtni tejab, Kpi.com yordamida talablarga rioya qilishmoqda"
     },
     tryNow: {
       en: "Try for Free",
-      ru: "Попробовать бесплатно"
+      ru: "Попробовать бесплатно",
+      uz: "Bepul sinab ko'rish"
     },
     schedule: {
       en: "Get started",
-      ru: "Начать"
+      ru: "Начать",
+      uz: "Boshlash"
     },
     orCall: {
       en: "Or call us at:",
-      ru: "Или позвоните нам:"
+      ru: "Или позвоните нам:",
+      uz: "Yoki bizga qo'ng'iroq qiling:"
     },
     cards: {
       time: {
-        en: " Cloud-Based Platform",
-        ru: " Облачная платформа"
+        en: "Cloud-Based Platform",
+        ru: "Облачная платформа",
+        uz: "Bulutga asoslangan platforma"
       },
       time_desc: {
         en: "Kpi.com operates entirely in the cloud...",
-        ru: "Kpi.com работает полностью в облаке..."
+        ru: "Kpi.com работает полностью в облаке...",
+        uz: "Kpi.com butunlay bulutda ishlaydi..."
       },
       revenue: {
-        en: " Integrated with ZATCA API",
-        ru: " Интеграция с API ZATCA"
+        en: "Integrated with ZATCA API",
+        ru: "Интеграция с API ZATCA",
+        uz: "ZATCA API bilan integratsiyalashgan"
       },
       revenue_desc: {
         en: "The platform is directly connected...",
-        ru: "Платформа напрямую подключена..."
+        ru: "Платформа напрямую подключена...",
+        uz: "Platforma to'g'ridan-to'g'ri ulangan..."
       },
       staff: {
-        en: " Tamper-Proof Infrastructure",
-        ru: " Защищённая инфраструктура"
+        en: "Tamper-Proof Infrastructure",
+        ru: "Защищённая инфраструктура",
+        uz: "O'zgartirishga qarshi himoyalangan infratuzilma"
       },
       staff_desc: {
         en: "Kpi.com includes built-in protection...",
-        ru: "В Kpi.com встроена защита от подделок..."
+        ru: "В Kpi.com встроена защита от подделок...",
+        uz: "Kpi.com ga o'rnatilgan himoya mavjud..."
       },
       satisfaction: {
-        en: " Full Invoice Archiving",
-        ru: " Полная архивация счетов"
+        en: "Full Invoice Archiving",
+        ru: "Полная архивация счетов",
+        uz: "Hisob-fakturalarning to'liq arxivlash"
       },
       satisfaction_desc: {
         en: "Every invoice issued through Kpi.com...",
-        ru: "Каждый счет, выставленный через Kpi.com..."
+        ru: "Каждый счет, выставленный через Kpi.com...",
+        uz: "Kpi.com orqali chiqarilgan har bir hisob-faktura..."
       },
       add: {
-        en: " Advanced Security Controls",
-        ru: " Расширенные средства безопасности"
+        en: "Advanced Security Controls",
+        ru: "Расширенные средства безопасности",
+        uz: "Kengaytirilgan xavfsizlik boshqaruvi"
       },
       add_desc: {
         en: "Our system is built to detect...",
-        ru: "Наша система фиксирует все подозрительные действия..."
+        ru: "Наша система фиксирует все подозрительные действия...",
+        uz: "Bizning tizimimiz barcha shubhali harakatlarni aniqlash uchun qurilgan..."
       }
     },
     button: {
       en: "Learn more",
-      ru: "Узнать больше"
+      ru: "Узнать больше",
+      uz: "Ko'proq bilish"
     },
     third_one: {
-      en: "Lorem ipsum dolor sit amet.",
-      ru: "Lorem ipsum dolor sit amet"
+      en: "Tracking of employees' arrival, departure, and tardiness",
+      ru: "Фиксация прихода, ухода и опоздания сотрудников",
+      uz: "Xodimlarning kelishi, ketishi va kechikishini belgilash"
     },
     third_two: {
-      en: "Lorem ipsum dolor sit amet.",
-      ru: "Lorem ipsum dolor sit amet"
+      en: "Quick implementation in any business",
+      ru: "Быстрое внедрение в любой бизнес",
+      uz: "Har qanday biznesga tez kiritish"
     },
     third_three: {
-      en: "Lorem ipsum dolor sit amet.",
-      ru: "Lorem ipsum dolor sit amet"
+      en: "Integration with 1C and Hikvision",
+      ru: "Интеграции с 1С и Hikvision",
+      uz: "1S va Hikvision bilan integratsiya"
     },
     third_four: {
-      en: "Lorem ipsum dolor sit amet.",
-      ru: "Lorem ipsum dolor sit amet"
+      en: "Protection against time and geolocation tampering",
+      ru: "Защита от подмены времени и геолокации",
+      uz: "Vaqt va geolokatsiya o'zgartirishidan himoya"
     },
     third_five: {
-      en: "Lorem ipsum dolor sit amet.",
-      ru: "Lorem ipsum dolor sit amet"
+      en: "Automatic generation of timesheets and reports",
+      ru: "Автоматическое формирование табеля и отчетов",
+      uz: "Tabel va hisobotlarni avtomatik shakllantirish"
     },
     team: {
       en: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempore.",
-      ru: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempore."
+      ru: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempore.",
+      uz: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempore."
     },
     team_btn: {
       en: "Learn more",
-      ru: "Узнать больше"
+      ru: "Узнать больше",
+      uz: "Ko'proq bilish"
     },
     card_one: {
-      en: "Lorem ipsum dolor sit amet lorem alskdl a;dkaks aldsl;kd;",
-      ru:"Lorem ipsum dolor sit amet"
+      en: "Submission of applications for leave, sick leave, and business trips",
+      ru: "Подача заявлений на отпуск, больничные и командировки",
+      uz: "Dam olish, kasallik varaqalari va komandirovka uchun arizalar topshirish"
     },
     card_two: {
-      en: "Lorem ipsum dolor sit amet lorem alskd",
-      ru:"Lorem ipsum dolor sit amet"
+      en: "Analytics and data for each employee",
+      ru: "Аналитика и данные по каждому сотруднику",
+      uz: "Har bir xodim bo'yicha analitika va ma'lumotlar"
     },
     card_three: {
-      en: "Lorem ipsum dolor sit amet lorem alskdl a;dkaks aldsl;kd;",
-      ru:"Lorem ipsum dolor sit amet"
+      en: "Monitoring across different branches simultaneously",
+      ru: "Контроль в разных филиалах одновременно",
+      uz: "Turli filiallarda bir vaqtning o'zida nazorat"
     },
     card_four: {
-      en: "Lorem ipsum dolor sit amet lorem alskdl a;dkaks aldsl;kd;",
-      ru:"Lorem ipsum dolor sit amet"
+      en: "Continuous system operation even without internet",
+      ru: "Непрерывная работа системы даже без интернета",
+      uz: "Internet bo'lmasa ham tizimning uzluksiz ishlashi"
     },
     phone_one_title: {
-      en: "Web lorem ipsum",
-      ru: "Web lorem ipsum"
+      en: "Post Vacancies",
+      ru: "По геолокации",
+      uz: "Geolokatsiya bo'yicha"
     },
     phone_two_title: {
-      en: "Web lorem ipsum",
-      ru: "Web lorem ipsum"
+      en: "Candidates Apply",
+      ru: "По распознаванию лица",
+      uz: "Yuzni tanish orqali"
     },
     phone_three_title: {
-      en: "Web lorem ipsum",
-      ru: "Web lorem ipsum"
+      en: "Sync & Manage",
+      ru: "Смешанный тип",
+      uz: "Aralash tur"
     },
     phone_one_desc: {
-      en: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque corrupti maiores suscipit exercitationem aperiam, architecto quas dolorem maxime odit!",
-      ru: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque corrupti maiores suscipit exercitationem aperiam, architecto quas dolorem maxime odit!"
+      en: "Your job openings from KPI.com are automatically displayed in the Telegram bot",
+      ru: "Сотрудники отмечают свой «Приход» в мобильном приложении после приезда на работу. Сервис считывает геолокацию и отправляет отметку в табель",
+      uz: "Xodimlar ishga kelganidan keyin mobil ilovada o'zlarining 'Kelish' ni belgilaydi. Xizmat geolokatsiyani o'qiydi va tabelga yuboradi"
     },
     phone_two_desc: {
-      en: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque corrupti maiores suscipit exercitationem aperiam, architecto quas dolorem maxime odit!",
-      ru: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque corrupti maiores suscipit exercitationem aperiam, architecto quas dolorem maxime odit!"
+      en: "Job seekers apply directly through the convenient Telegram interface",
+      ru: "Отметка происходит посредством распознавания лица с корпоративного устройства или дополнительного специального оборудования",
+      uz: "Belgilash korporativ qurilma yoki qo'shimcha maxsus uskunalar yordamida yuzni tanish orqali amalga oshiriladi"
     },
     phone_three_desc: {
-      en: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque corrupti maiores suscipit exercitationem aperiam, architecto quas dolorem maxime odit!",
-      ru: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque corrupti maiores suscipit exercitationem aperiam, architecto quas dolorem maxime odit!"
+      en: "All applications are automatically synced back to your KPI.com dashboard",
+      ru: "Для тех компаний, которым нужен двойной уровень проверки: геолокация + распознавание лица",
+      uz: "Ikki darajali tekshiruvga muhtoj bo'lgan kompaniyalar uchun: geolokatsiya + yuzni tanish"
     },
     three_one_title: {
-      en: "lorem ipsuum dolor",
-      ru: "lorem ipsum dolor"
+      en: "Prompt",
+      ru: "Оперативная",
+      uz: "Tezkor"
     },
     three_two_title: {
-      en: "lorem ipsuum dolor",
-      ru: "lorem ipsum dolor "
+      en: "Uninterrupted",
+      ru: "Бесперебойная",
+      uz: "Uzluksiz"
     },
     three_three_title: {
-      en: "lorem ipsuum dolor",
-      ru: "lorem ipsum dolor "
+      en: "Convenient",
+      ru: "Удобно",
+      uz: "Qulay"
     },
     three_one_desc: {
-      en: "lorem ipsuum dolor",
-      ru: "lorem ipsum dolor sit amet"
+      en: "Technical Support",
+      ru: "Техническая Поддержка",
+      uz: "Texnik yordam"
     },
     three_two_desc: {
-      en: "lorem ipsuum dolor",
-      ru: "lorem ipsum dolor sit amet"
+      en: "Operation",
+      ru: "работа",
+      uz: "Ish"
     },
     three_three_desc: {
-      en: "lorem ipsuum dolor",
-      ru: "lorem ipsum dolor sit amet"
+      en: "For Employees",
+      ru: "для сотрудников",
+      uz: "Xodimlar uchun"
     },
     three_one_unique: {
-      en: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquid unde molestias quaerat maiores similique hic nisi amet quas nam.",
-      ru: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquid unde molestias quaerat maiores similique hic nisi amet quas nam."
+      en: "Reliable and responsive technical support will help resolve any issues in the shortest time.",
+      ru: "Надежная и отзывчивая Техническая поддержка поможет решить любые возникшие вопросы в кратчайшее время",
+      uz: "Ishonchli va tezkor texnik yordam har qanday muammolarni eng qisqa vaqt ichida hal qilishga yordam beradi."
     },
     three_two_unique: {
-      en: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquid unde molestias quaerat maiores similique hic nisi amet quas nam.",
-      ru: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquid unde molestias quaerat maiores similique hic nisi amet quas nam."
+      en: "No serious malfunctions have been observed since WorkPace started operating in 2021.",
+      ru: "За все время работы WorkPace с 2021 года не наблюдалось ни одной серьёзной неполадки",
+      uz: "WorkPace 2021-yildan beri ishlay boshlaganidan beri jiddiy nosozliklar kuzatilmagan."
     },
     three_three_unique: {
-      en: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquid unde molestias quaerat maiores similique hic nisi amet quas nam.",
-      ru: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquid unde molestias quaerat maiores similique hic nisi amet quas nam."
+      en: "WorkPace implementation is easily accepted by employees as it is convenient and simplifies HR processes.",
+      ru: "Внедрение WorkPace легко принимается сотрудниками, ведь он удобен и облегчает кадровые процессы",
+      uz: "WorkPace ni joriy qilish xodimlar tomonidan oson qabul qilinadi, chunki u qulay va kadr jarayonlarini soddalashtiradi."
     },
-    
-  };
+    photo_p1: {
+      en: "AI-assisted efficient integration",
+      ru: "Эффективная интеграция с помощью ИИ",
+      uz: "Al yordamida isha yollash integratsiya"
+    },
+    photo_p2: {
+      en: "Kpi.com",
+      ru: "Kpi.com",
+      uz: "Kpi.com"
+    },
+    photo_p3: {
+      en: "Telegram Bot",
+      ru: "Telegram-бот",
+      uz: "Telegram Bot"
+    },
+    photo_p4: {
+      en: "KPI.com via our smart Telegram bot efficiently organizes the integration process.",
+      ru: "KPI.com через нашего умного Telegram-бота эффективно организует процесс интеграции.",
+      uz: "KPI.com va aqlli Telegram botimiz orqali integratsiya jarayonini samarali tashkil etadi"
+    },
+    photo_p5: {
+      en: "Request a demo",
+      ru: "Запросить демо",
+      uz: "Demo buyurtma qiling"
+    },
+    photo_p6: {
+      en: "Try for free",
+      ru: "Попробовать бесплатно",
+      uz: "Bepul sinab ko'ring"
+    },
 
-  const faqData = [
+    photo_second_p1: {
+      en: "AI-assisted efficient integration",
+      ru: "Эффективная интеграция с помощью ИИ",
+      uz: "Al yordamida isha yollash integratsiya"
+    },
+    photo_second_p2: {
+      en: "HR Bot",
+      ru: "HR-бот",
+      uz: "HR Bot"
+    },
+    photo_second_p3: {
+      en: "About",
+      ru: "О нас",
+      uz: "Haqida"
+    },
+    photo_second_p4: {
+      en: "HR Bot is an advanced Telegram bot specifically designed for modern recruitment needs. Our solution effectively bridges the gap between traditional HR platforms and modern communication tools.",
+      ru: "HR Bot — это продвинутый Telegram-бот, специально разработанный для современных задач рекрутинга. Наше решение эффективно устраняет разрыв между традиционными HR-платформами и современными инструментами коммуникации.",
+      uz: "HR Bot — bu zamonaviy kadrlar tanlash ehtiyojlari uchun maxsus ishlab chiqilgan ilg‘or Telegram bot. Bizning yechimimiz an’anaviy HR platformalar va zamonaviy aloqa vositalari o‘rtasidagi bo‘shliqni samarali to‘ldiradi."
+    },
+    photo_second_p5: {
+      en: "AI-assisted screening",
+      ru: "Сортировка с помощью ИИ",
+      uz: "AI yordamida saralash"
+    },
+    photo_second_p6: {
+      en: "Seamless integration",
+      ru: "Безупречная интеграция",
+      uz: "Muammosiz integratsiya"
+    },
+    photo_second_p7: {
+      en: "24/7 support",
+      ru: "Поддержка 24/7",
+      uz: "24/7 qo'llab-quvatlash"
+    },
+    photo_second_p8: {
+      en: "Advanced AI algorithms for candidate screening and role matching",
+      ru: "Передовые алгоритмы ИИ для отбора кандидатов и соответствия ролей",
+      uz: "Nomzodlarni saralash va lavozimga moshlashtirish uchun ilg'or AI algoritmlari"
+    },
+    photo_second_p9: {
+      en: "Full integration with Kpi.com and other HR platforms",
+      ru: "Полная интеграция с Kpi.com и другими HR-платформами",
+      uz: "Kpi.com va boshqa HR platformalar bilan to'liq integratsiya"
+    },
+    photo_second_p10: {
+      en: "Day-and-night monitoring and technical support",
+      ru: "Мониторинг и техническая поддержка круглосуточно",
+      uz: "Kun-u tun monitoring va texnik yordam"
+    },
+    bot: {
+      uz: "Arizalarni boshqaring, ma'lumotlarni sinxronlashtiring va nomzodlarni har qachongidan tezroq ishga yollang",
+      ru: "Управляйте заявками, синхронизируйте данные и нанимайте кандидатов быстрее, чем когда-либо",
+      en: "Manage applications, synchronize data, and hire candidates faster than ever"
+    },
+    botSecond: {
+      uz: "Aqlli avtomatlashtirish va inson markazidagi dizayn - mukammal yollash tajribasi uchun uyg'un yechim",
+      ru: "Умная автоматизация и дизайн, ориентированный на человека - идеальное решение для совершенного опыта найма",
+      en: "Smart automation and human-centered design - a perfect solution for an impeccable hiring experience"
+    }
+};
+
+const faqData = [
   {
     question: {
       en: 'Is there a location limit in WorkPace?',
-      ru: 'Есть ли ограничение по количеству локаций в WorkPace?'
+      ru: 'Есть ли ограничение по количеству локаций в WorkPace?',
+      uz: "WorkPace da lokatsiyalar soni bo'yicha cheklov bormi?"
     },
     answer: {
       en: 'No, the number of locations in WorkPace is unlimited.',
-      ru: 'Нет, количество локаций в WorkPace неограниченно.'
+      ru: 'Нет, количество локаций в WorkPace неограниченно.',
+      uz: "Yo'q, WorkPace dagi lokatsiyalar soni cheklanmagan."
     }
   },
   {
     question: {
       en: 'How does WorkPace integrate with external devices?',
-      ru: 'Как работает WorkPace через подключение внешних устройств?'
+      ru: 'Как работает WorkPace через подключение внешних устройств?',
+      uz: "WorkPace tashqi qurilmalar bilan qanday integratsiyalashadi?"
     },
     answer: {
       en: 'When integrated with devices like Hikvision, employee tracking is automatic through face recognition.',
-      ru: 'При интеграции с такими устройствами, как Hikvision, учет сотрудников происходит автоматически через распознавание лиц.'
+      ru: 'При интеграции с такими устройствами, как Hikvision, учет сотрудников происходит автоматически через распознавание лиц.',
+      uz: "Hikvision kabi qurilmalar bilan integratsiyalashganda, xodimlar kuzatuvi avtomatik tarzda yuzni tanish orqali amalga oshiriladi."
     }
   },
   {
     question: {
       en: 'Does the connection method affect the price?',
-      ru: 'Влияет ли способ подключения на стоимость?'
+      ru: 'Влияет ли способ подключения на стоимость?',
+      uz: "Ulanish usuli narxga ta'sir qiladimi?"
     },
     answer: {
       en: 'No, the connection method does not affect the service cost.',
-      ru: 'Нет, метод подключения не влияет на стоимость сервиса.'
+      ru: 'Нет, метод подключения не влияет на стоимость сервиса.',
+      uz: "Yo'q, ulanish usuli xizmat narxiga ta'sir qilmaydi."
     }
   },
   {
     question: {
       en: 'What reports does WorkPace provide?',
-      ru: 'Какие отчеты имеются в WorkPace?'
+      ru: 'Какие отчеты имеются в WorkPace?',
+      uz: "WorkPace qanday hisobotlarni taqdim etadi?"
     },
     answer: {
       en: 'WorkPace provides all necessary reports: attendance, tardiness, overtimes, etc.',
-      ru: 'WorkPace формирует все необходимые отчеты по посещаемости, опозданиям, переработкам и другим аспектам.'
+      ru: 'WorkPace формирует все необходимые отчеты по посещаемости, опозданиям, переработкам и другим аспектам.',
+      uz: "WorkPace barcha zarur hisobotlarni taqdim etadi: davomat, kechikishlar, qo'shimcha ish vaqtlar va boshqa jihatlar."
     }
   },
   {
     question: {
       en: 'How to connect WorkPace?',
-      ru: 'Как подключить WorkPace?'
+      ru: 'Как подключить WorkPace?',
+      uz: "WorkPace ni qanday ulash mumkin?"
     },
     answer: {
       en: 'Leave a request on the website — we will help you.',
-      ru: 'Оставьте заявку на сайте, мы вас проконсультируем и поможем с подключением.'
+      ru: 'Оставьте заявку на сайте, мы вас проконсультируем и поможем с подключением.',
+      uz: "Veb-saytda so'rov qoldiring — biz sizga yordam beramiz va ulanishda yordam beramiz."
     }
   }
-  ];
+];
 
   const [activeIndex, setActiveIndex] = useState(null);
   const toggleFAQ = (index) => setActiveIndex(prev => (prev === index ? null : index));
@@ -332,45 +484,69 @@ const Home = () => {
   return (
     <>
     <MetaTags lang={lang} />
-      <div className="home">
-          <div className='third'>
-            <LanguageDropdown />
-          <img className='logoo' src={logoo} alt="" />
-          </div>
-        <div className="dark">
+    <div className="home ">
+      <div className="dark">
+      <LanguageDropdown />
+        <img className='logoo' src={logoo} alt="" />
+     <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+        <SwiperSlide>
           <div className="box">
             <div className="left">
-              <div className='na'>
-              <h1 className='fade-in-up'>{t.title[lang]}</h1>
-            <a 
-              className='link' 
-              href="https://zatca.gov.sa/en/E-Invoicing/Introduction/Pages/Roll-out-phases.aspx" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-             <button className='third_btn third_btn fade-in-up'>{t.button[lang]}</button>
-            </a>
+              <p>{t.photo_p1[lang]}</p>
+              <h1>{t.photo_p2[lang]} <br /> <strong>{t.photo_p3[lang]}</strong></h1>
+              <h5>{t.photo_p4[lang]}</h5>
+              <div className='btn_box'>
+                <button className='btn_left'>{t.photo_p5[lang]}</button>
+                <button className='btn_right'>{t.photo_p6[lang]}</button>
               </div>
+              <button className="bottom"></button>
             </div>
-            <div className="right fade-in-up">
-              <div>
-                <label>{t.formTitle[lang]}</label>
-                <input type="text" placeholder={t.placeholder[lang]} />
-                <input type="text" placeholder="+998 " />
-                  <a href="https://calendly.com/kpicom/kpi-com-demo" className="link asd" target="_blank" rel="noopener noreferrer">
-                    <button className="input_btn">
-                      {t.demoBtn[lang]}
-                    </button>
-                  </a>
-                <p>
-                  {t.agree[lang]} <a href='https://www.kpi.com/en/company/privacy/' className='privacy' target="_blank" rel="noopener noreferrer">{t.personal[lang]}</a>
-                </p>
-              </div>
+            <div className="right">
+              <img src={bot} alt="" />
+              <p>{t.bot[lang]}</p>
             </div>
           </div>
+        </SwiperSlide>
+        
+        <SwiperSlide>
+          <div className="box as">
+            <div className="left">
+              <p>{t.photo_second_p1[lang]}</p>
+              <h1>{t.photo_second_p2[lang]}<strong>{t.photo_second_p3[lang]}</strong></h1>
+              <h5>{t.photo_second_p4[lang]}</h5>
+              <div className='opasity'>
+                <div className='opasity_card'>
+                  <button><FaCheck className='opa_icon'/></button>
+                  <div className='card_box'>
+                  <h3>{t.photo_second_p5[lang]}</h3>
+                  <p>{t.photo_second_p6[lang]}</p>
+                  </div>
+                </div>
+               <div className='opasity_card'>
+                  <button><FaCheck className='opa_icon'/></button>
+                  <div className='card_box'>
+                  <h3>{t.photo_second_p7[lang]}</h3>
+                  <p>{t.photo_second_p8[lang]}</p>
+                  </div>
+                </div>
+                <div className='opasity_card'>
+                  <button><FaCheck className='opa_icon'/></button>
+                  <div className='card_box'>
+                  <h3>{t.photo_second_p9[lang]}</h3>
+                  <p>{t.photo_second_p10[lang]}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="right sa">
+              <img src={botTwo} alt="" />
+              <h3>{t.botSecond[lang]}</h3>
+            </div>
+          </div>
+        </SwiperSlide>
+      </Swiper>
         </div>
       </div>
-
       <div className="third_section_one">
         <div className="third_section_one_box im">
           <h2>{t.third_one[lang]}</h2>
@@ -405,7 +581,7 @@ const Home = () => {
         <h1 className='text'>{t.commonProblems[lang]}</h1>
         <iframe
             className='video'
-            src="https://www.youtube.com/embed/N5ay5AooieI"
+            src="https://www.youtube.com/embed/AAXBgfLKSeA"
             frameBorder="0"
             allowFullScreen
             title="Hotel CRM Introduction Video"
@@ -470,7 +646,7 @@ const Home = () => {
         <div className='phone_box teo'>
           <iframe
             className='video-second'
-            src="https://www.youtube.com/embed/N5ay5AooieI"
+            src="https://www.youtube.com/embed/AAXBgfLKSeA"
             frameBorder="0"
             allowFullScreen
             title="Hotel CRM Introduction Video"
@@ -525,14 +701,18 @@ const Home = () => {
       <div className="faq-container">
         <h2 className='text'>{t.faq[lang]}</h2>
         {faqData.map((item, i) => (
-          <div className={`faq-item ${activeIndex === i ? 'active fade-in-up' : 'fade-in-up'}`} key={i} onClick={() => toggleFAQ(i)}>
+          <div
+            className={`faq-item ${activeIndex === i ? 'active fade-in-up' : 'fade-in-up'}`}
+            key={i}
+            onClick={() => toggleFAQ(i)}
+          >
             <button className="faq-question">
-              {lang === 'ru' ? item.question.ru : item.question.en}
-              <span>{activeIndex === i ? <IoClose/> : <FaPlus/>}</span>
+              {item.question[lang]}
+              <span>{activeIndex === i ? <IoClose /> : <FaPlus />}</span>
             </button>
             {activeIndex === i && (
               <div className={`faq-answer ${activeIndex === i ? 'open' : ''}`}>
-                {lang === 'ru' ? item.answer.ru : item.answer.en}
+                {item.answer[lang]}
               </div>
             )}
           </div>

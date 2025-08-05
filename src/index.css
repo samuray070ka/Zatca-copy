@@ -12,10 +12,37 @@
 .link{
   text-decoration: none;
 }
+.right p{
+  width: 18%;
+  right: 60px;
+  /* line-height: 1.8; */
+  font-size: 18px;
+  text-align: center;
+  transform: translatey(210px);
+  position: absolute;
+}
+.sa h3{
+  width: 50%;
+  right: 90px;
+  font-weight: 100;
+  text-align: center;
+  transform: translatey(160px);
+  position: absolute;
+}
 .home {
    max-width: 100%;
-  min-height: 100vh;
-  background: url(https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdHAxOTMtYXVkaS0wMDAzLXguanBn.jpg) no-repeat center/cover;
+  height: 120vh;
+  background: url(./Blue_and_White_Modern_AI_Chatbot_Animated_Social_Media\,_копия_2.jpg) no-repeat center/cover;
+}
+.opasity_card{
+  width: 100%;
+}
+.opasity_card .card_box h3{
+  font-weight: 900;
+}
+.home .as .left .opasity .opasity_card .card_box p{
+  font-weight: 100;
+  font-size: 15px;
 }
 .privacy{
   font-weight: 900;
@@ -55,7 +82,7 @@
 }
 .box{
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   margin-top: 100px;
   display: flex;
   align-items: center;
@@ -532,46 +559,213 @@
 .lang-menu li:hover {
   background-color: #f0f0f0;
 }
+@media screen and (max-width: 1400px) {
+  .right p{
+    font-size: 16px;
+    transform: translateY(190px);
+    width: 16%;
+    right: 70px;
+  }
+  .right h3{
+    transform: translateY(140px);
+    font-size: 16px;
+  }
+  .box{
+    justify-content: left;
+  }
+  .left{
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width:1280px) {
+  .right p{
+    font-size: 14px;
+    transform: translateY(170px);
+  }
+}
+@media screen and (max-width:1175px) {
+  .right p{
+    transform: translateY(160px);
+    right: 60px;
+  }
+  .right h3{
+    transform: translateY(120px);
+    right: 70px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width:1100px) {
+  .right{
+    width: 40%;
+    z-index: -1;
+    right: 20px;
+    transform: translateY(-20px);
+    position: absolute;
+  }
+  .right p{
+    width: 55%;
+    transform: translateY(190px) translateX(-10px);
+  }
+  .right h3{
+    font-size: 18px;
+    transform: translateY(150px) translateX(-15px);
+  }
+  .left{
+    width: 70%;
+  }
+}
+@media screen and (max-width:1000px) {
+    .mySwiper{
+    min-height: 135vh;
+  }
+  .btn_box{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn_box .btn_left{
+    width: 50%;
+    height: 40px;
+    font-size: 16px;
+  }
+  .btn_box .btn_right{
+    width: 50%;
+    height: 40px;
+    font-size: 16px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(0);
+    transform: translateX(10px);
+  }
+  .bottom{
+    display: none;
+  }
+  .right h3{
+    font-size: 16px;
+    transform: translateY(135px) translateX(-10px);
+  }
+  .right p{
+    transform: translateY(175px);
+  }
+  .home .dark .box .left p{
+    font-size: 18px;
+  }
+  .home .dark .box .left h1{
+    font-size: 50px;
+  }
+  .home .dark .box .left h5{
+    font-size: 20px;
+  }
+  .left .opasity{
+    padding: 10px ;
+    width: 60%;
+  }
+  .left .opasity_card button{
+    min-width: 60px;
+    min-height: 60px;
+  }
+  .left .opasity_card .card_box h3{
+    font-size: 16px;
+  }
+  .home .dark .box .left .opasity_card .card_box p{
+    font-size: 13px;
+  }
+}
+@media screen and (max-width:900px) {
+  .left{
+    width: 100%;
+  }
+  .right p{
+    transform: translateY(160px);
+  }
+  .right h3{
+    transform: translateY(120px) translateX(0px);
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .right p{
+    font-size: 12px;
+    transform: translateY(140px);
+    right: 50px;
+  }
+  .right h3{
+    transform: translateY(110px) translateX(10px);
+  }
+  .home .dark .as .left p{
+    font-size: 16px;
+  }
+  .home .dark .as .left h1{
+    font-size: 40px;
+  }
+  .home .dark .as .left h5{
+    font-size: 16px;
+    width: 60%;
+  }
+}
+@media screen and (max-width:650px) {
+  .right{
+    display: none;
+  }
+  .btn_box{
+    width: 90%;
+  }
+  .home .dark .as .left h5{
+    width: 90%;
+  }
+  .home .dark .as .left .opasity{
+    width: 70%;
+  }
+}
+@media screen and (max-width:540px) {
+  .home .dark .as .left .opasity{
+    width: 95%;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width:460px) {
+  .home .dark .box .left h1{
+  font-size: 40px;
+  }
+  .home .dark .box .left h5{
+    font-size: 20px;
+    width: 100%;
+   }
+   .home .dark .box .left .btn_box {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+   }
+   .home .dark .box .left .btn_box .btn_left{
+    margin-bottom: 10px;
+    font-size: 14px;
+   }
+   .home .dark .box .left .btn_box .btn_right{
+    transform: translateX(0);
+    font-size: 14px;
+    border: 1px solid #fff;
+   }
+   .text{
+    font-size: 20px;
+   }
+}
+@media screen and (max-width:400px) {
+  .home .dark .as .left h5{
+    font-size: 16px;
+  }
+  .home .dark .box .left h1{
+    font-size: 25px;
+  }
+}
 @media screen and (max-width:1240px) {
   .cards{
     width: 90%;
   }
 }
-@media screen and (max-width:1190px) {
-  .left{
-    padding: 20px;
-  }
-}
 @media screen and (max-width:1100px) {
   .cards{
-    width: 95%;
-  }
-}
-@media screen and (max-width:990px) {
-  .left{
-    width: 50%;
-  }
-  .right{
-    display: flex;
-    align-items: center;
-    width: 50%;
-  }
-  .button{
-    width: 270px;
-    font-size: 15px;
-  }
-  .left h1{
-    font-size: 45px;
-  }
-}
-@media screen and (max-width:900px) {
-  .left h1{
-    font-size: 40px;
-  }
-  .left p{
-    font-size: 16px;
-  }
-  .img_box{
     width: 95%;
   }
 }
@@ -583,25 +777,6 @@
     font-size: 20px;
   }
 }
-@media screen and (max-width:810px) {
-  .right{
-    width: 40%;
-    align-items: last baseline;
-    /* transform: translateX(-20px); */
-  }
-  .right form{
-    width: 100%;
-  }
-  .left{
-    width: 55%;
-  }
-  .text{
-    font-size: 35px;
-  }
-  .text_p{
-    font-size: 18px;
-  }
-}
 @media screen and (max-width:750px) {
   .box_left{
     width: 100%;
@@ -611,45 +786,13 @@
     padding: 0 20px;
   }
 }
-@media screen and (max-width:650px) {
-  .box{
-    flex-wrap: wrap;
-  }
-  .left{
-    width: 100%;
-  }
-  .right{
-    display: none;
-    width: 90%;
-  }
-  .card{
-    width: 100%;
-  }
-  .faq-container{
-    padding: 0;
-    width: 100%;
-  }
-}
-.left_icon{
-  transform: translateY(3px);
-}
 @media screen and (max-width:600px) {
-  .box_right{
-    /* display: none; */
-    position: absolute;
-    right: 0;
-    transform: translateY(-120px);
-    z-index: -1;
-    /* filter: blur(2px); */
-    /* border: 1px solid red; */
-  }
   .df{
     width: 50%;
     left: 0;
     transform: translateY(-150px);
   }
   .img_box{
-    /* position: relative; */
     overflow-x: hidden;
   }
 }
@@ -1189,15 +1332,6 @@ body{
 .na p:hover{
   text-decoration: underline;
 }
-@media screen and (max-width:650px) {
-  .right{
-    transform: translateX(-10px);
-    display: block;
-  }
-  .box{
-    height: 50vh;
-  }
-}
 @media screen and (max-width:720px) {
   .logoo{
     left: 20px;
@@ -1205,14 +1339,6 @@ body{
   .logof{
     transform: translateX(-60px);
     position: absolute;
-  }
-}
-@media screen and (max-width:440px) {
-  .right{
-    transform: translateX(0);
-  }
-  .right div{
-    width: 100%;
   }
 }
 @media screen and (max-width:800px) {
@@ -1249,9 +1375,6 @@ body{
   min-height: 780px;
 }
 @media screen and (max-width:413px) {
-  .home{
-    min-height: 890px;
-  }
   .img_box{
     min-height: 110vh;
     align-items: normal;
@@ -1269,4 +1392,125 @@ body{
   .ttt p{
     margin-bottom: 30px;
   }
+}
+.left p{
+  font-size: 22px;
+}
+.left p strong{
+  color: rgb(64, 159, 255);
+}
+.left h1 strong{
+  color: #0a74ff;
+}
+.left h5{
+  font-size: 24px;
+  font-weight: 400;
+  width: 75%;
+  margin-bottom: 20px;
+}
+.btn_left{
+  width: 60%;
+  height: 80px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  font-size: 30px;
+  color: rgb(15, 15, 50);
+  font-weight: 800;
+  transition: .3s;
+  cursor: pointer;
+  background: #fff;
+}
+.btn_box{
+  display: flex;
+}
+.left{
+  margin-top: 120px;
+}
+.btn_right{
+  width: 40%;
+  border-radius: 40px;
+  height: 115px;
+  outline: none;
+  border: none;
+  font-size: 25px;
+  font-weight: 800;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
+  background-color: rgb(15, 15, 50);
+  transform: translateX(-50px);
+  transition: .3s;
+  cursor: pointer;
+}
+.bottom{
+  width: 90%;
+  height: 30px;
+  background-color: rgb(15, 15, 50);
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  transform: translatey(-29.5px);
+    transition: .3s;
+  cursor: pointer;
+}
+.opasity{
+  width: 80%;
+  border-radius: 30px;
+  background-color: #0a41883e;
+  padding: 30px;
+  margin-bottom: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.opasity_card{
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.opasity_card button{
+  width: 55px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background-color: #0a74ff;
+  border-radius: 50px;
+}
+.opa_icon{
+  font-size: 20px;
+  background-color: #fff;
+  color: rgb(15, 15, 50);
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 3px;
+}
+.card_box{
+  transform: translateX(10px);
+}
+.opasity h3{
+  font-weight: 900;
+  font-size: 18px;
+}
+.opasity p{
+  font-weight: 100;
+  font-size: 16px;
+}
+.as h1{
+  font-size: 50px;
+}
+.as {
+  transform: translateY(100px);
+}
+.sa{
+  transform: translateY(-100px);
+}
+.btn_box{
+  margin-top: 30px;
 }

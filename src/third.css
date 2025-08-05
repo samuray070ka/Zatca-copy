@@ -43,7 +43,6 @@ body{
 .sections{
     height: 100%;
     width: 49%;
-    /* display: flex; */
 }
 .div_box{
     width: 100%;
@@ -99,7 +98,6 @@ body{
     padding: 20px 30px;
     margin-top: 5px;
     background: url(./remove\ text\ from\ the.png) no-repeat center/cover;
-    /* background:linear-gradient(45deg, #1E3A8A, rgb(33, 144, 255)); */
 }
 @media screen and (max-width:1200px) {
     .white img{
@@ -176,7 +174,6 @@ body{
         width: 100%;
     }
     .sections{
-        /* min-height: 800px; */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -239,7 +236,6 @@ body{
     }
     .third_section_one_box{
         align-items: normal;
-        /* justify-content: left; */
         background: url(./image.png) no-repeat center/cover;
     }
     .child h1, .child_second h1, .child_third{
@@ -322,7 +318,6 @@ body{
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
 .faq {
   width: 32.5%;
   height: 100%;
@@ -333,7 +328,6 @@ body{
   position: relative;
   overflow: hidden;
 }
-
 .faq_dark {
   position: absolute;
   inset: 0;
@@ -341,13 +335,11 @@ body{
   color: white;
   padding: 20px;
   border-radius: 30px;
-    font-size: 18px;
+  font-size: 18px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s ease, visibility 0.2s ease;
 }
-
-
 .faq:hover .faq_dark {
   opacity: 1;
   visibility: visible;
@@ -414,7 +406,6 @@ body{
     .home .dark .box .left .na h1{
         font-size: 40px;
     }
-
 }
 @media screen and (max-width:650px) {
     .right{
@@ -497,7 +488,6 @@ body{
     transform: translateY(0);
   }
 }
-
 @keyframes slideInLeft {
   from {
     opacity: 0;
@@ -508,7 +498,6 @@ body{
     transform: translateX(0);
   }
 }
-
 @keyframes zoomIn {
   from {
     transform: scale(0.8);
@@ -519,15 +508,12 @@ body{
     opacity: 1;
   }
 }
-
 .fade-in-up {
   animation: fadeInUp 1s ease forwards;
 }
-
 .slide-in-left {
   animation: slideInLeft 1s ease forwards;
 }
-
 .zoom-in {
   animation: zoomIn 0.8s ease forwards;
 }
@@ -541,7 +527,6 @@ body{
     flex-wrap: wrap;
     margin-top: 20px;
     margin-bottom: 100px;
-
 }
 .phone_box{
     width: 49.5%;
@@ -779,7 +764,6 @@ body{
     height: 300px;
     display: flex;
     margin-bottom: 20px;
-    /* align-items: center; */
 }
 .one p{
     position: absolute;
@@ -985,7 +969,6 @@ body{
 @media screen and (max-width:580px) {
     .thir_card{
         width: 100%;
-        /* margin-bottom: 20px; */
     }
     .thir_cards{
         margin-bottom: 900px;

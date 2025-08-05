@@ -14,6 +14,11 @@ const languages = [
     label: 'Russian',
     flag: 'https://flagcdn.com/w40/ru.png', // Rossiya bayrog'i
   },
+  {
+    code: 'uz',
+    label: 'Uzbek',
+    flag: 'https://flagcdn.com/w40/uz.png', // Rossiya bayrog'i
+  },
 ];
 
 const LanguageDropdown = () => {
