@@ -223,9 +223,9 @@ const t = {
       uz: "Xodimlar bilan muloqotni avtomatlashtiring"
     },
     team_btn: {
-      en: "Submit a request",
-      ru: "Оставить заявку",
-      uz: "So'rov yuborish"
+       en: "Try for free",
+      ru: "Попробовать бесплатно",
+      uz: "Bepul sinab ko'ring"
     },
     card_one: {
       en: "Submission of applications for leave, sick leave, and business trips",
@@ -313,19 +313,19 @@ const t = {
       uz: "Ishonchli va tezkor texnik yordam har qanday muammolarni eng qisqa vaqt ichida hal qilishga yordam beradi."
     },
     three_two_unique: {
-      en: "No serious malfunctions have been observed since WorkPace started operating in 2021.",
-      ru: "За все время работы WorkPace с 2021 года не наблюдалось ни одной серьёзной неполадки",
-      uz: "WorkPace 2021-yildan beri ishlay boshlaganidan beri jiddiy nosozliklar kuzatilmagan."
+      en: "No serious malfunctions have been observed since Kpi.com started operating in 2021.",
+      ru: "За все время работы Kpi.com с 2021 года не наблюдалось ни одной серьёзной неполадки",
+      uz: "Kpi.com 2021-yildan beri ishlay boshlaganidan beri jiddiy nosozliklar kuzatilmagan."
     },
     three_three_unique: {
-      en: "WorkPace implementation is easily accepted by employees as it is convenient and simplifies HR processes.",
-      ru: "Внедрение WorkPace легко принимается сотрудниками, ведь он удобен и облегчает кадровые процессы",
-      uz: "WorkPace ni joriy qilish xodimlar tomonidan oson qabul qilinadi, chunki u qulay va kadr jarayonlarini soddalashtiradi."
+      en: "Kpi.com implementation is easily accepted by employees as it is convenient and simplifies HR processes.",
+      ru: "Внедрение Kpi.com легко принимается сотрудниками, ведь он удобен и облегчает кадровые процессы",
+      uz: "Kpi.com ni joriy qilish xodimlar tomonidan oson qabul qilinadi, chunki u qulay va kadr jarayonlarini soddalashtiradi."
     },
     photo_p1: {
-      en: "AI-assisted efficient integration",
-      ru: "Эффективная интеграция с помощью ИИ",
-      uz: "Al yordamida isha yollash integratsiya"
+      en: "HR bot assisted efficient integration",
+      ru: "HR-бot Эффективная интеграция с помощью ",
+      uz: "HR bot yordamida ishga yollash integratsiya"
     },
     photo_p2: {
       en: "Kpi.com",
@@ -354,9 +354,9 @@ const t = {
     },
 
     photo_second_p1: {
-      en: "AI-assisted efficient integration",
-      ru: "Эффективная интеграция с помощью ИИ",
-      uz: "Al yordamida isha yollash integratsiya"
+      en: "HR bot assisted efficient integration",
+      ru: "HR-бot Эффективная интеграция с помощью",
+      uz: "HR bot yordamida ishga yollash integratsiya"
     },
     photo_second_p2: {
       en: "HR Bot",
@@ -374,9 +374,9 @@ const t = {
       uz: "HR Bot — bu zamonaviy kadrlar tanlash ehtiyojlari uchun maxsus ishlab chiqilgan ilg‘or Telegram bot. Bizning yechimimiz an’anaviy HR platformalar va zamonaviy aloqa vositalari o‘rtasidagi bo‘shliqni samarali to‘ldiradi."
     },
     photo_second_p5: {
-      en: "AI-assisted screening",
-      ru: "Сортировка с помощью ИИ",
-      uz: "AI yordamida saralash"
+      en: "HR bot assisted screening",
+      ru: "HR-бot Сортировка с помощью",
+      uz: "HR bot yordamida saralash"
     },
     photo_second_p6: {
       en: "Seamless integration",
@@ -389,9 +389,9 @@ const t = {
       uz: "24/7 qo'llab-quvatlash"
     },
     photo_second_p8: {
-      en: "Advanced AI algorithms for candidate screening and role matching",
-      ru: "Передовые алгоритмы ИИ для отбора кандидатов и соответствия ролей",
-      uz: "Nomzodlarni saralash va lavozimga moshlashtirish uchun ilg'or AI algoritmlari"
+      en: "Advanced HR bot algorithms for candidate screening and role matching",
+      ru: "Передовые алгоритмы HR-бot для отбора кандидатов и соответствия ролей",
+      uz: "Nomzodlarni saralash va lavozimga moshlashtirish uchun ilg'or HR bot algoritmlari"
     },
     photo_second_p9: {
       en: "Full integration with Kpi.com and other HR platforms",
@@ -418,21 +418,21 @@ const t = {
 const faqData = [
   {
     question: {
-      en: 'Is there a location limit in WorkPace?',
-      ru: 'Есть ли ограничение по количеству локаций в WorkPace?',
-      uz: "WorkPace da lokatsiyalar soni bo'yicha cheklov bormi?"
+      en: 'Is there a location limit in Kpi.com?',
+      ru: 'Есть ли ограничение по количеству локаций в Kpi.com?',
+      uz: "Kpi.com da lokatsiyalar soni bo'yicha cheklov bormi?"
     },
     answer: {
-      en: 'No, the number of locations in WorkPace is unlimited.',
-      ru: 'Нет, количество локаций в WorkPace неограниченно.',
-      uz: "Yo'q, WorkPace dagi lokatsiyalar soni cheklanmagan."
+      en: 'No, the number of locations in Kpi.com is unlimited.',
+      ru: 'Нет, количество локаций в Kpi.com неограниченно.',
+      uz: "Yo'q, Kpi.com dagi lokatsiyalar soni cheklanmagan."
     }
   },
   {
     question: {
-      en: 'How does WorkPace integrate with external devices?',
-      ru: 'Как работает WorkPace через подключение внешних устройств?',
-      uz: "WorkPace tashqi qurilmalar bilan qanday integratsiyalashadi?"
+      en: 'How does Kpi.com integrate with external devices?',
+      ru: 'Как работает Kpi.com через подключение внешних устройств?',
+      uz: "Kpi.com tashqi qurilmalar bilan qanday integratsiyalashadi?"
     },
     answer: {
       en: 'When integrated with devices like Hikvision, employee tracking is automatic through face recognition.',
@@ -454,21 +454,21 @@ const faqData = [
   },
   {
     question: {
-      en: 'What reports does WorkPace provide?',
-      ru: 'Какие отчеты имеются в WorkPace?',
-      uz: "WorkPace qanday hisobotlarni taqdim etadi?"
+      en: 'What reports does Kpi.com provide?',
+      ru: 'Какие отчеты имеются в Kpi.com?',
+      uz: "Kpi.com qanday hisobotlarni taqdim etadi?"
     },
     answer: {
-      en: 'WorkPace provides all necessary reports: attendance, tardiness, overtimes, etc.',
-      ru: 'WorkPace формирует все необходимые отчеты по посещаемости, опозданиям, переработкам и другим аспектам.',
-      uz: "WorkPace barcha zarur hisobotlarni taqdim etadi: davomat, kechikishlar, qo'shimcha ish vaqtlar va boshqa jihatlar."
+      en: 'Kpi.com provides all necessary reports: attendance, tardiness, overtimes, etc.',
+      ru: 'Kpi.com формирует все необходимые отчеты по посещаемости, опозданиям, переработкам и другим аспектам.',
+      uz: "Kpi.com barcha zarur hisobotlarni taqdim etadi: davomat, kechikishlar, qo'shimcha ish vaqtlar va boshqa jihatlar."
     }
   },
   {
     question: {
-      en: 'How to connect WorkPace?',
-      ru: 'Как подключить WorkPace?',
-      uz: "WorkPace ni qanday ulash mumkin?"
+      en: 'How to connect Kpi.com?',
+      ru: 'Как подключить Kpi.com?',
+      uz: "Kpi.com ni qanday ulash mumkin?"
     },
     answer: {
       en: 'Leave a request on the website — we will help you.',
@@ -480,6 +480,12 @@ const faqData = [
 
   const [activeIndex, setActiveIndex] = useState(null);
   const toggleFAQ = (index) => setActiveIndex(prev => (prev === index ? null : index));
+  const phoneNumber = lang === 'en' 
+    ? '+447990113943' 
+    : '+998 94 605 42 78';
+  const hrefLink = lang === 'en'
+    ? 'https://wa.me/447990113943?text=Hello%2C%20Im%20interested%20in%20integrating%20Zatka%20with%20my%20Kpi.com.%20Could%20you%20please%20provide%20more%20details%3F%0ACompany%20Name%3A%20xxx%0APhone%20Number%3A%20xxx%0AEmail%3A%20xxx&type=phone_number&app_absent=0'
+    : 'tel:+998 94 605 42 78';
 
   return (
     <>
@@ -497,7 +503,7 @@ const faqData = [
               <h5>{t.photo_p4[lang]}</h5>
               <div className='btn_box'>
                 <a className='btn_left link' href='#video'>{t.photo_p5[lang]}</a>
-                <a className='btn_right link link_second' target='_blank' rel="noreferrer" href='https://apps.kpi.com'>{t.photo_p6[lang]}</a>
+                <a className='btn_right link link_second' target='_blank' rel="noreferrer" href='https://calendly.com/kpicom/kpi-com-demo'>{t.photo_p6[lang]}</a>
               </div>
               <button className="bottom"></button>
             </div>
@@ -601,7 +607,7 @@ const faqData = [
         <div className="third_team slide-in-left">
           <div className='third_left'>
           <p>{t.team[lang]}</p>
-          <button>{t.team_btn[lang]}</button>
+          <a className='buttons' href="https://calendly.com/kpicom/kpi-com-demo" target='_blank' rel='noreferrer'><button>{t.team_btn[lang]}</button></a>
           </div>
           <div className='third_right'>
             <img src={banner} alt="" />
@@ -728,7 +734,7 @@ const faqData = [
         </div>
         <div className='footer_Box'>
          <BsWhatsapp className='icon_footer'/>
-         <a href="https://wa.me/447990113943?text=Hello%2C%20Im%20interested%20in%20integrating%20Zatka%20with%20my%20Kpi.com.%20Could%20you%20please%20provide%20more%20details%3F%0ACompany%20Name%3A%20xxx%0APhone%20Number%3A%20xxx%0AEmail%3A%20xxx&type=phone_number&app_absent=0" className='link_footer' target="_blank" rel="noopener noreferrer"><strong> +447990113943</strong></a>
+         <a href={hrefLink} className='link_footer' target="_blank" rel="noopener noreferrer"><strong>{phoneNumber}</strong></a>
         </div>
       </div>
     </>
