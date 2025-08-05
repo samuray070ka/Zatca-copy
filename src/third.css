@@ -1083,3 +1083,8 @@ html{
     transition: .3s;
     cursor: pointer;
 }
+.three img{
+    width: 80%;
+    transform: translateY(10px) translateX(100px);
+    z-index: 10;
+}
