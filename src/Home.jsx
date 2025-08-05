@@ -496,8 +496,8 @@ const faqData = [
               <h1>{t.photo_p2[lang]} <br /> <strong>{t.photo_p3[lang]}</strong></h1>
               <h5>{t.photo_p4[lang]}</h5>
               <div className='btn_box'>
-                <button className='btn_left'>{t.photo_p5[lang]}</button>
-                <button className='btn_right'>{t.photo_p6[lang]}</button>
+                <a className='btn_left link' href='#video'>{t.photo_p5[lang]}</a>
+                <a className='btn_right link link_second' target='_blank' rel="noreferrer" href='https://apps.kpi.com'>{t.photo_p6[lang]}</a>
               </div>
               <button className="bottom"></button>
             </div>
@@ -577,7 +577,7 @@ const faqData = [
         </div>
       </div>
 
-      <div className="video_box fade-in-up ">
+      <div className="video_box fade-in-up " id='video'>
         <h1 className='text'>{t.commonProblems[lang]}</h1>
         <iframe
             className='video'
