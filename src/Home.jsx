@@ -4,188 +4,52 @@ import { IoIosArrowForward } from "react-icons/io";
 import { BsWhatsapp } from "react-icons/bs";
 import { useLang } from './LanguageContext.jsx';
 import LanguageDropdown from './LanguageDropdown.jsx';
-import logoo from "./image-removebg-preview21.png"
+import logoo from "./assets/image-removebg-preview21.png"
 import MetaTags from './MetaTags.jsx';
 import './third.css'
-import banner from './dasdasdasdasd.jpg'
-import card from './image2.png'
-import card2 from './Screenshot 2025-08-05 160915.png'
-import phone from './image-removebg-preview2.png'
-import phoneTwo from './image-removebg-preview (1).png'
+import card2 from './assets/Screenshot 2025-08-05 160915.png'
+import phone from './assets/Screenshot 2025-08-05 165129.png'
+import phoneTwo from './assets/4.png'
 import { FaPlus } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
-import bot from './bot.png'
-import botTwo from './bot-2.png'
+import bot from './assets/bot.png'
+import botTwo from './assets/bot-2.png'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import { FaCheck } from "react-icons/fa6";
+import sa from './assets/sa.png'
 const Home = () => {
   const { lang } = useLang(); 
 
   const t = {
-      placeholder: {
-        en: "Your name",
-        ru: "Ваше имя",
-        uz: "Sizning ismingiz"
-      },
-      title: {
-        en: "Is your business ready for ZATCA compliance?",
-        ru: "Готов ли ваш бизнес к соблюдению требований ZATCA?",
-        uz: "Sizning biznesingiz ZATCA talablariga tayyormi?"
-      },
-      subtitle: {
-        en: "Zatca deadlines coming up? Choose kpi.com to seamlessly get your accounts aligned.",
-        ru: "Приближаются сроки ZATCA? Выбирайте kpi.com для лёгкого соответствия требованиям.",
-        uz: "ZATCA muddatlari yaqinlashmoqda? Hisoblaringizni osongina muvofiqlashtirish uchun kpi.com ni tanlang."
-      },
-      tryBtn: {
-        en: "Try Integration",
-        ru: "Попробовать интеграцию",
-        uz: "Integratsiyani sinab ko'rish"
-      },
-      formTitle: {
-        en: "Connect with Us Now",
-        ru: "Свяжитесь с нами",
-        uz: "Hoziroq biz bilan bog'laning"
-      },
-      demoBtn: {
-        en: "Get started",
-        ru: "Начать сейчас",
-        uz: "Endi boshlash"
-      },
-      agree: {
-        en: "I agree to the processing of",
-        ru: "Я согласен на обработку",
-        uz: "Men qayta ishlashga roziman"
-      },
-      personal: {
-        en: "privacy",
-        ru: "персональных данных",
-        uz: "shaxsiy ma'lumotlar"
-      },
       commonProblems: {
         en: "How kpi.com helps you get integrated?",
         ru: "Как kpi.com помогает с интеграцией?",
         uz: "Kpi.com qanday qilib integratsiya qilishga yordam beradi?"
-      },
-      bestChoice: {
-        en: "Kpi.com — Your Trusted ZATCA Integration Partner",
-        ru: "Kpi.com — ваш надежный партнер по интеграции с ZATCA",
-        uz: "Kpi.com — Sizning ZATCA integratsiyasi bo'yicha ishonchli hamkoringiz"
-      },
-      guestInfo: {
-        en: "All Invoice Data in One Secure Dashboard Track every essential detail of your e-invoices, all in one place:",
-        ru: "Все данные счетов в одной защищённой панели. Отслеживайте каждый важный элемент в одном месте:",
-        uz: "Barcha hisob-faktura ma'lumotlari bitta xavfsiz panelda. Elektron hisoblaringizning har bir muhim elementini bir joyda kuzating:"
-      },
-      guestInfoDesc: {
-        en: "Invoice issue and delivery timestamps — Customer identification and VAT details — Approval statuses and rejection logs — Associated credit or debit notes, linked automatically — Digital signatures, UUIDs, and QR codes, fully compliant with ZATCA Phase 2",
-        ru: "Дата и время выставления и доставки счета — Идентификация клиента и данные по НДС — Статусы одобрения и отклонения — Автоматически связанные кредитные и дебетовые уведомления — Цифровые подписи, UUID и QR-коды, соответствующие ZATCA Phase 2",
-        uz: "Hisob-faktura chiqarish va yetkazib berish vaqtlari — Mijozni identifikatsiya qilish va NDS ma'lumotlari — Tasdiqlash holatlari va rad etish jurnallari — Avtomatik bog'langan kredit yoki debet eslatmalari — Raqamli imzo, UUID va QR-kodlar, ZATCA Phase 2 ga to'liq mos"
-      },
-      workGuide: {
-        en: "Clear Workflow for Every Finance Team A structured invoicing process with:",
-        ru: "Чёткий рабочий процесс для каждой финансовой команды:",
-        uz: "Har bir moliya jamoasi uchun aniq ish jarayoni:"
-      },
-      workGuideDesc: {
-        en: "Seamless steps from creation to ZATCA submission — Mandatory fields validation before sending — Automatic deadline reminders — Full activity log of staff handling invoices and corrections",
-        ru: "Пошаговый процесс от создания до отправки в ZATCA — Проверка обязательных полей перед отправкой — Автоматические напоминания о сроках — Полный журнал действий сотрудников",
-        uz: "Yaratishdan ZATCA ga yuborishgacha bo'lgan muammosiz bosqichlar — Yuborishdan oldin majburiy maydonlarni tekshirish — Avtomatik muddat eslatmalari — Hisob-fakturalar va tuzatishlar bilan ishlovchi xodimlarning to'liq faoliyat jurnali"
       },
       transform: {
         en: "Transform how your company handles invoicing",
         ru: "Измените подход вашей компании к выставлению счетов",
         uz: "Kompaniyangizning hisob-faktura bilan ishlash usulini o'zgartiring"
       },
-      transformDesc: {
-        en: "Kpi delivers tangible improvements across all aspects.",
-        ru: "Kpi предлагает реальные улучшения во всех аспектах.",
-        uz: "Kpi barcha jihatlarda sezilarli yaxshilanishlarni ta'minlaydi."
-      },
       faq: {
         en: "Frequently Asked Questions",
         ru: "Часто задаваемые вопросы",
         uz: "Tez-tez so'raladigan savollar"
       },
-      streamline: {
-        en: "Is your business ready for ZATCA Phase 2 compliance?",
-        ru: "Готов ли ваш бизнес к этапу 2 соответствия ZATCA?",
-        uz: "Sizning biznesingiz ZATCA Phase 2 ga muvofiqlashga tayyormi?"
-      },
+
       join: {
         en: "Join companies across Saudi Arabia who are already saving time and staying compliant with Kpi.com",
         ru: "Присоединяйтесь к компаниям, которые уже экономят время и соблюдают требования с помощью Kpi.com",
         uz: "Saudiya Arabistonidagi kompaniyalarga qo'shiling, ular allaqachon vaqtni tejab, Kpi.com yordamida talablarga rioya qilishmoqda"
       },
-      tryNow: {
-        en: "Try for Free",
-        ru: "Попробовать бесплатно",
-        uz: "Bepul sinab ko'rish"
-      },
+     
       schedule: {
         en: "Get started",
         ru: "Начать",
         uz: "Boshlash"
-      },
-      orCall: {
-        en: "Or call us at:",
-        ru: "Или позвоните нам:",
-        uz: "Yoki bizga qo'ng'iroq qiling:"
-      },
-      cards: {
-        time: {
-          en: "Cloud-Based Platform",
-          ru: "Облачная платформа",
-          uz: "Bulutga asoslangan platforma"
-        },
-        time_desc: {
-          en: "Kpi.com operates entirely in the cloud...",
-          ru: "Kpi.com работает полностью в облаке...",
-          uz: "Kpi.com butunlay bulutda ishlaydi..."
-        },
-        revenue: {
-          en: "Integrated with ZATCA API",
-          ru: "Интеграция с API ZATCA",
-          uz: "ZATCA API bilan integratsiyalashgan"
-        },
-        revenue_desc: {
-          en: "The platform is directly connected...",
-          ru: "Платформа напрямую подключена...",
-          uz: "Platforma to'g'ridan-to'g'ri ulangan..."
-        },
-        staff: {
-          en: "Tamper-Proof Infrastructure",
-          ru: "Защищённая инфраструктура",
-          uz: "O'zgartirishga qarshi himoyalangan infratuzilma"
-        },
-        staff_desc: {
-          en: "Kpi.com includes built-in protection...",
-          ru: "В Kpi.com встроена защита от подделок...",
-          uz: "Kpi.com ga o'rnatilgan himoya mavjud..."
-        },
-        satisfaction: {
-          en: "Full Invoice Archiving",
-          ru: "Полная архивация счетов",
-          uz: "Hisob-fakturalarning to'liq arxivlash"
-        },
-        satisfaction_desc: {
-          en: "Every invoice issued through Kpi.com...",
-          ru: "Каждый счет, выставленный через Kpi.com...",
-          uz: "Kpi.com orqali chiqarilgan har bir hisob-faktura..."
-        },
-        add: {
-          en: "Advanced Security Controls",
-          ru: "Расширенные средства безопасности",
-          uz: "Kengaytirilgan xavfsizlik boshqaruvi"
-        },
-        add_desc: {
-          en: "Our system is built to detect...",
-          ru: "Наша система фиксирует все подозрительные действия...",
-          uz: "Bizning tizimimiz barcha shubhali harakatlarni aniqlash uchun qurilgan..."
-        }
       },
       button: {
         en: "Learn more",
@@ -216,16 +80,6 @@ const Home = () => {
         en: "Automatic generation of timesheets and reports",
         ru: "Автоматическое формирование табеля и отчетов",
         uz: "Tabel va hisobotlarni avtomatik shakllantirish"
-      },
-      team: {
-        en: "Automate communication with employees",
-        ru: "Автоматизируй коммуникацию с сотрудниками",
-        uz: "Xodimlar bilan muloqotni avtomatlashtiring"
-      },
-      team_btn: {
-        en: "Try for free",
-        ru: "Попробовать бесплатно",
-        uz: "Bepul sinab ko'ring"
       },
       card_one: {
         en: "Submission of applications for leave, sick leave, and business trips",
@@ -553,7 +407,7 @@ const Home = () => {
       </Swiper>
         </div>
       </div>
-      <div className="third_section_one">
+      {/* <div className="third_section_one">
         <div className="third_section_one_box im">
           <h2>{t.third_one[lang]}</h2>
         </div>
@@ -581,7 +435,7 @@ const Home = () => {
           <h2>{t.third_five[lang]}</h2>
           <img src={card} alt="" />
         </div>
-      </div>
+      </div> */}
 
       <div className="video_box fade-in-up " id='video'>
         <h1 className='text'>{t.commonProblems[lang]}</h1>
@@ -604,7 +458,7 @@ const Home = () => {
           <img src={img1} alt="" />
         </div>
       </div> */}
-        <div className="third_team slide-in-left">
+        {/* <div className="third_team slide-in-left">
           <div className='third_left'>
           <p>{t.team[lang]}</p>
           <a className='buttons' href="https://calendly.com/kpicom/kpi-com-demo" target='_blank' rel='noreferrer'><button>{t.team_btn[lang]}</button></a>
@@ -612,7 +466,7 @@ const Home = () => {
           <div className='third_right'>
             <img src={banner} alt="" />
           </div>
-        </div>
+        </div> */}
 
       <div className="thir_cards">
         <div className="thir_card zoom-in one">
@@ -633,7 +487,7 @@ const Home = () => {
         <div className="thir_card zoom-in four">
           <p>04</p>
           <h2>{t.card_four[lang]}</h2>
-          <img src="https://static.tildacdn.pro/tild3562-3136-4030-a364-363064313432/Frame_1321314433.png" alt="" />
+          <img src={sa} alt="" />
         </div>
       </div>
 
@@ -645,7 +499,7 @@ const Home = () => {
             <h3>{t.phone_one_title[lang]}</h3>
             <p>{t.phone_one_desc[lang]}</p>
           </div>
-          <div className="phone_img">
+          <div className="phone_img sax">
             <img src={phone} alt="" />
           </div>
         </div>
@@ -664,7 +518,7 @@ const Home = () => {
             <h3>{t.phone_two_title[lang]}</h3>
             <p>{t.phone_two_desc[lang]}</p>
           </div>
-          <div className="phone_img">
+          <div className="phone_img ">
             <img src={phoneTwo} alt="" />
           </div>
         </div>
@@ -674,7 +528,7 @@ const Home = () => {
             <h3>{t.phone_three_title[lang]}</h3>
             <p>{t.phone_three_desc[lang]}</p>
           </div>
-          <div className="phone_img">
+          <div className="phone_img ">
             <img src={phoneTwo} alt="" />
           </div>
         </div>

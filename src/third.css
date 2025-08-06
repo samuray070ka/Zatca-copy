@@ -13,288 +13,10 @@
 .home .dark .box .left .na h1{
     font-size: 50px;
 }
-.third_section_one{
-    width: 80%;
-    min-height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    color: #fff;
-}
 body{
     width: 100%;
     min-height: 100vh;
     background-color: #eee;
-}
-.third_section_one_box{
-    width: 24.4%;
-    height: 100%;
-    background-color: #1E3A8A;
-    padding: 20px 30px;
-    border-radius: 30px;
-}
-.third_section_one_box img{
-    width: 100%;
-    height: 300px;
-}
-.sections{
-    height: 100%;
-    width: 49%;
-}
-.div_box{
-    width: 100%;
-    height: 220px;
-    display: flex;
-}
-.child, .child_second{
-    width: 50%;
-    height: 100%;
-    padding: 20px 30px;
-    border-radius: 30px;
-    background-color: #fff;
-}
-.child_second{
-    margin-left: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-    background-color: #1E3A8A;
-}
-.child_second h1{
-    margin-bottom: 20px;
-    font-size: 25px;
-}
-.third_section_one .sections .div_box .child h1{
-    color: #1E3A8A;
-}
-.child_second img{
-    width: 100%;
-    height: 20%;
-}
-.child img{
-    width: 70%;
-    z-index: 0;
-    transform: translateX(50px) translateY(40px);
-    border-radius: 20px;
-    position: absolute;
-}
-.child{
-    position: relative;
-    display: flex;
-}
-.child h1{
-    font-size: 25px;
-    transform: translatey(20px);
-    z-index: 1;
-}
-.child_third{
-    width: 100%;
-    height: 200px;
-    border-radius: 30px;
-    padding: 20px 30px;
-    margin-top: 5px;
-    background: url(./remove\ text\ from\ the.png) no-repeat center/cover;
-}
-@media screen and (max-width:1200px) {
-    .white img{
-        display: none;
-    }
-    .white{
-        background: url(./image2.png) no-repeat center/cover;
-    }
-}
-@media screen and (max-width:770px) {
-    .third_section_one_box{
-        min-width: 100%;
-        max-height: 20px;
-    }
-    .white{
-        background: none;
-    }
-    .third_section_one .white img{
-        display: block;
-        width: 600px;
-        transform: translateY(0px);
-        height: 100%;
-    }
-}
-@media screen and (max-width:700px) {
-    .third_section_one .white{
-        background: #fff;
-    }
-}
-@media screen and (max-width:460px) {
-    .white h2{
-        font-size: 20px;
-        margin: auto;
-    }
-}
-@media screen and (max-width:410px) {
-    .white h2{
-        font-size: 16px;
-    }
-}
-@media screen and (max-width:375px) {
-    .white img{
-        max-width: 150px;
-    }
-}
-.third_section_one_box{
-    background-color: #1E3A8D;
-}
-.white{
-    padding: 30px;
-    height: 430px;
-}
-.white img{
-    height: 250px;
-    width: 290px;
-    transform: translateX(-22px) translateY(40px);
-}
-@media screen and (max-width:1250px) {
-    .third_section_one{
-        width: 90%;
-    }
-}
-@media screen and (max-width:1115px) {
-    .third_section_one{
-        width: 95%;
-    }
-}
-@media screen and (max-width:1000px) {
-    .div_box{
-        display: flex;
-        flex-direction: column;
-    }
-    .child, .child_second{
-        width: 100%;
-    }
-    .sections{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .child{
-        background: url(https://static.tildacdn.pro/tild3465-3162-4934-a333-343464386138/Card1.jpg) no-repeat center/cover;
-        min-height: 150px;
-        margin-bottom: 10px;
-    }
-    .child img{
-        display: none;
-    }
-    .child_second{
-        min-height: 200px;
-    }
-    .child_second img{
-        width: 60%;
-    }
-    .child_third{
-        margin-top: 150px;
-    }
-    .third_section_one_box{
-        min-height: 580px;
-    }
-}
-@media screen and (max-width:770px) {
-    .third_section_one{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .third_section_one_box{
-        min-height: 200px;
-        margin-bottom: 10px;
-    }
-    .third_section_one_box{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-    .third_section_one_box img{
-        width: 40%;
-    }
-    .child, .child_second, .child_third{
-        max-width: 100%;
-    }
-    .child_second img{
-        width: 40%;
-    }
-    .sections{
-        width: 100%;
-        margin-bottom: 10px;
-    }
-}
-@media screen and (max-width:700px) {
-    .third_section_one_box img{
-        display: none;
-    }
-    .third_section_one_box{
-        align-items: normal;
-        background: url(./image.png) no-repeat center/cover;
-    }
-    .child h1, .child_second h1, .child_third{
-        text-align: center;
-    }
-    .white{
-        background: url(./Frame_1321314123-removebg-preview.png) no-repeat center/cover;
-    }
-}
-@media screen and (max-width:465px) {
-    .child_second img{
-        width: 70%;
-    }
-}
-.third_team {
-    width: 90%;
-    margin: auto;
-    height: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 30px;
-    background: url(https://t3.ftcdn.net/jpg/11/62/02/66/360_F_1162026681_NDCNqlLZe8JZzd4L1rhkUrw2A3CBeYdy.jpg) no-repeat center/cover;
-    padding: 0 20px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    filter: blur(2px);
-    transition: .3s;
-}
-.third_team:hover{
-    filter: blur(0px);
-}
-.third_left {
-    width: 50%;
-}
-.third_right {
-    width: 50%;
-}
-.third_right img {
-    width: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .3s;
-}
-.third_right img:hover{
-    transform: scale(1.05);
-}
-.third_right img:active{
-    transform: scale(1);
-}
-.third_left p {
-    font-size: 35px;
-    color: #fff;
-    font-weight: 900;
-    margin-bottom: 10px;
-}
-.white{
-    color: #1E3A8A;
-    background-color: #fff;
 }
 .third_faq {
   width: 90%;
@@ -653,12 +375,6 @@ html{
     .faq-item .faq-question{
         font-size: 15px;
     }
-}
-.im{
-    width: 25%;
-    height: 427px;
-    background: url(./image.png) no-repeat center/cover;
-    padding: 30px;
 }
 .child img{
     width: 100%;
@@ -1029,11 +745,11 @@ html{
 }
 .phone_img{
     height: 100%;
-    width: 70%;
+    width: 520px;
     /* transform: translateY(50px); */
 }
 .phone_img img{
-    width: 100%;
+    width: 150px;
     height: 100%;
 }
 @media screen and (max-width:1200px) {
@@ -1087,4 +803,27 @@ html{
     width: 80%;
     transform: translateY(10px) translateX(100px);
     z-index: 10;
+}
+.four{
+    position: relative;
+}
+.four img{
+    width: 65%;
+    height: 65%;
+    right: -30px;
+    bottom: -30px;
+}
+.four h2{
+    width: 40%;
+}
+.phone_img{
+    max-width: 250px;
+    height: 85%;
+    transform: translateY(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.phoned .phone_box .sax img{
+    min-width: 175px;
 }
